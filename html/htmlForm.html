@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/htmlForm.css">
+</head>
+
+<body>
+    <header>
+        <label for="menuBtn" class="menuBtn-label">
+            <svg>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="html.html">HTML</a>
+                <a href="htmlH5.html">H5</a>
+                <a href="htmlDisplay.html">Display</a>
+                <a href="htmlForm.html" class="current-a">Form</a>
+                <a href="htmlStructure.html">Structure</a>
+                <a href="htmlEntity.html">Entity</a>
+            </div>
+        </nav>
+        <div class="inPageNav"></div>
+    </header>
+    <main>
+        <section>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;form action="将提交表单到该服务器地址" id=""&gt;
+                    <br>
+                    <span class="colorGray">|用于收集用户输入信息</span>
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;fieldset&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|分组长表单的表单项</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;legend&gt;&lt;/legend&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;指定长表单内分组名</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;label for="表单项id值"&gt;&lt;/label&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;为&lt;input&gt;绑定按钮或文字，点击即触发指定的&lt;input&gt;控件</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;label标签内可以指定文字&lt;img&gt;&lt;svg&gt;等</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;for属性指定绑定哪个元素，其值为绑定元素的id</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;<mark>input</mark> type="" list="datalist的id"&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;<span class="h5">H5</span> list属性将表单元素与datalist绑定</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;当输入类型是网址value属性值必须添加</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;datalist id=""&gt; <span class="h5">H5</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|与表单元素绑定实现可输入下拉列表</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;</span>&lt;option value="" label=""&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;label属性指定辅助信息</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;/datalist&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;/fieldset&gt;
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;button&gt;&lt;/button&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;除了input submit，也可以使用button创建提交表单按钮</span>
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;select name="" multiple="multiple"&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|下拉列表</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|multiple属性设置为可多选的展开下拉列表</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;optgroup label="分组命名"&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|分组列表项</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;</span>&lt;option value="" selected="selected"&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;列表项</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;selected属性指定默认选中的选项</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;/optgroup&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;/select&gt;
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;textarea name=""&gt;&lt;/textarea&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;文本域</span>
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;keygen&gt;&lt;/keygen&gt; <span class="h5">H5</span>
+                    <br>
+                    <span class="colorGray">|&emsp;密钥生成，用于加密和验证</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span><span class="browser ie">IE</span> <span class="colorR">Not supported</span>
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;output&gt;&lt;/output&gt; <span class="h5">H5</span>
+                    <br>
+                    <span class="colorGray">|&emsp;只能显示output标签内的信息不能修改</span>
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    &lt;/form&gt;
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>&lt;input type=""&gt;</h2>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">submit</span>" value=""&gt;
+                <br>
+                提交按钮，用于提交表单
+                <br>
+                value属性指定按钮上的文字
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">reset</span>"&gt;
+                <br>
+                重置按钮
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">button</span>" value=""&gt;
+                <br>
+                按钮，通过JS绑定响应函数实现功能
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">text</span>" name="" value=""&gt;
+                <br>
+                单行文本框，默认20个字符宽度
+                <br>
+                <br>
+                name属性指定内容描述名称
+                <br>
+                <mark>该属性是提供数据发送到服务器的必要信息，提交后信息会写入url以查询字符串的形式发送</mark>
+                <br>
+                查询字符串的格式:内容描述名称=文本框中的信息，提交多个信息以&链接
+                <br>
+                命名通常由后端决定
+                <br>
+                <br>
+                value属性指定文本框内的默认信息
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">password</span>" name=""&gt;
+                <br>
+                密码框，默认字符被掩码
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">radio</span>" name="" value="" checked="checked"&gt;
+                <br>
+                单选
+                name属性指定同组单选项需命名一致
+                <br>
+                <br>
+                value属性指定选择项各自的内容
+                <br>
+                <mark>该属性是需要用户选择的表单项提供数据发送到服务器的必要信息</mark>
+                <br>
+                <br>
+                checked="checked"指定默认选中的选项
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">checkbox</span>" name="" value="" checked="checked"&gt;
+                <br>
+                复选框
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">file</span>" name="" multiple&gt;
+                <br>
+                文件
+                <br>
+                <span class="h5">H5</span> multiple属性实现选择多个文件
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">search</span>" name="q" placeholder="" autocomplete="off" autofocus&gt;
+                <br>
+                <span class="h5">H5</span> 搜索，默认有清除内容功能，及搜索相似字符时显示提交历史
+                <br>
+                <span class="h5">H5</span> placeholder属性指定提示信息，无需删除即可键入
+                <br>
+                <span class="h5">H5</span> autocomplete属性获取历史提交信息选择后自动补全，可设置为on打开或off关闭
+                <br>
+                <span class="h5">H5</span> autofocus属性实现焦点状态为默认获取，打开和刷新页面后有效
+                <br>
+                <span class="browser chrome">Chrome</span> <span class="browser opera">Opera</span> 获取焦点时显示轮廓，清除轮廓input{outline:none;}
+                <br>
+                <span class="browser chrome">Chrome</span> <span class="browser opera">Opera</span> 输入后显示删除按钮，清除按钮input::-webkit-search-cancel-button{display: none;}
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">email</span>" name="" multiple&gt;
+                <br>
+                <span class="h5">H5</span> 邮箱，当提交的邮件地址格式不规范，提示相应规则，并阻断提交
+                <br>
+                <span class="h5">H5</span> 增加multiple属性后，使用逗号分隔可提交多个邮件地址
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">url</span>" name="""&gt;
+                <br>
+                <span class="h5">H5</span> 网址，网址必须包含http:
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">number</span>" name="quantity" max="" min="" value=""&gt;
+                <br>
+                <span class="h5">H5</span> 数量，只能输入数字和小数点
+                <br>
+                max属性限制可键入最大值
+                <br>
+                min属性限制可键入最小值
+                <br>
+                value属性设置默认值
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">range</span>" name="" max="" min="" value=""&gt;
+                <br>
+                <span class="h5">H5</span> 范围，滑块控件
+                <br>
+                默认值是中间值
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">color</span>" name="" value=""&gt;
+                <br>
+                <span class="h5">H5</span> 颜色选择器，默认值是#000
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">time</span>" name=""&gt;
+                <br>
+                <span class="h5">H5</span> 时间控件
+                <br>
+                <span class="browser safari">Safari</span> <span class="colorR">Not supported</span>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">date</span>" name=""&gt;
+                <br>
+                <span class="h5">H5</span> 日期控件
+                <br>
+                <span class="browser safari">Safari</span> <span class="colorR">Not supported</span>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">datetime-local</span>" name=""&gt;
+                <br>
+                <span class="h5">H5</span> 日期和时间控件
+                <br>
+                <span class="browser firefox">Firefox</span> <span class="colorR">Not supported</span>
+                <br>
+                <span class="browser safari">Safari</span> <span class="colorR">Not supported</span>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">month</span>" name=""&gt;
+                <br>
+                <span class="h5">H5</span> 年月控件
+                <br>
+                <span class="browser firefox">Firefox</span> <span class="colorR">Not supported</span>
+                <br>
+                <span class="browser safari">Safari</span> <span class="colorR">Not supported</span>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">week</span>" name=""&gt;
+                <br>
+                <span class="h5">H5</span> 年星期控件
+                <br>
+                <span class="browser firefox">Firefox</span> <span class="colorR">Not supported</span>
+                <br>
+                <span class="browser safari">Safari</span> <span class="colorR">Not supported</span>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="<span class="bgY">tel</span>" name="" pattern="" required&gt;
+                <br>
+                <span class="h5">H5</span> 电话，实现在移动端启动数字键盘
+                <br>
+                <span class="h5">H5</span> pattern属性指定用于验证的正则表达式
+                <br>
+                <span class="h5">H5</span> required属性表示必须输入，未输入或输入格式不规范则弹出提示并阻止数据提交
+                <br>
+                <span class="browser chrome">Chrome</span> <span class="colorR">Not supported</span>
+                <br>
+                <span class="browser ie">IE</span> <span class="colorR">Not supported</span>
+                <br>
+                <span class="browser firefox">Firefox</span> <span class="colorR">Not supported</span>
+                <br>
+                <span class="browser opera">Opera</span> <span class="colorR">Not supported</span>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                &lt;input type="" <span class="cssColor">form</span>="表单id"&gt;
+                <br>
+                <span class="h5">H5</span> 该属性将表单外的表单元素与表单绑定，当表单提交时，当前被绑定的表单元素会一起提交
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

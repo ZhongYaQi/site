@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <header id="shadowPst">
+        <label for="menuBtn" class="menuBtn-label">
+            <svg>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="css.html">CSS</a>
+                <a href="css3.html" class="current-a">CSS3</a>
+                <a href="cssResponsiveLayout.html">Responsive Layout</a>
+                <a href="cssSelector.html">Selector</a>
+                <a href="cssUnits.html">Units</a>
+            </div>
+        </nav>
+        <div class="inPageNav">
+            <div class="inPageNavContainer">
+                <a href="#shadowPst">阴影</a>
+                <a href="#textOverflowePst">文本溢出</a>
+                <a href="#wordWrapPst">自动换行</a>
+                <a href="#fontFacePst">服务器端字体</a>
+                <a href="#transformPst">2D3D</a>
+                <a href="#animationPst">动画</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- 阴影 -->
+        <section>
+            <h2>text-shadow 文字阴影</h2>
+            <p>text-shadow:水平阴影向右移动的数值 垂直阴影向下移动的数值 模糊程度 颜色;</p>
+            <br>
+            <h2>box-shadow 容器阴影</h2>
+            <p id="textOverflowePst">box-shadow:水平阴影向右移动的数值 垂直阴影向下移动的数值 模糊程度 颜色 inset;</p>
+            <p>inset属性值表示内阴影</p>
+        </section>
+        <br>
+        <br>
+        <br>
+        <!-- 文本溢出 -->
+        <section>
+            <br>
+            <br>
+            <h2>text-overflow 文本溢出</h2>
+            <p>text-overflow:;</p>
+            <br>
+            <table>
+                <tr>
+                    <th>clip</th>
+                    <td data-th="clip">溢出的部分被修剪隐藏</td>
+                </tr>
+                <tr>
+                    <th>ellipsis</th>
+                    <td data-th="ellipsis">溢出的部分被修剪隐藏，结尾处显示三点省略号</td>
+                </tr>
+                <tr id="wordWrapPst">
+                    <th>''</th>
+                    <td data-th="&apos;&apos;"><span class="browser firefox">Firefox supported</span> 溢出的部分被修剪隐藏，结尾处显示字符串中的自定义内容</td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        <br>
+        <br>
+        <!-- 文本换行 -->
+        <section>
+            <br>
+            <br>
+            <h2>word-wrap 长单词换行</h2>
+            <p>word-wrap:;</p>
+            <br>
+            <table>
+                <tr>
+                    <th>normal</th>
+                    <td data-th="normal">默认，单词结束后换行</td>
+                </tr>
+                <tr>
+                    <th>break-word</th>
+                    <td data-th="break-word">长单词可换行</td>
+                </tr>
+            </table>
+            <br>
+            <h2>word-break 单词换行</h2>
+            <p>word-break:;</p>
+            <br>
+            <table>
+                <tr>
+                    <th>normal</th>
+                    <td data-th="normal">默认，单词结束后换行</td>
+                </tr>
+                <tr>
+                    <th>break-all</th>
+                    <td data-th="break-all"><span class="tag">常用</span> 单词内可换行</td>
+                </tr>
+                <tr id="fontFacePst">
+                    <th>keep-all</th>
+                    <td data-th="keep-all">只能在半角空格或连字符处换行</td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        <br>
+        <br>
+        <!-- 引用字体 -->
+        <section>
+            <br>
+            <br>
+            <h2>@font-face 引用字体</h2>
+            <p>@font-face{font-family:; src:url();}</p>
+            <p>font-family:; <span class="tag">Required</span> 定义字体名称</p>
+            <p>src:; <span class="tag">Required</span> 获取字体文件地址，字体会被自动下载给有需要的用户</p>
+            <br id="transformPst">
+            <p>font-stretch:; 拉伸字体</p>
+        </section>
+        <br>
+        <br>
+        <br>
+        <!-- 2D/3D -->
+        <section>
+            <br>
+            <br>
+            <h2>transform 2D或3D转换</h2>
+            <p>transform:平移 <span class="colorG">旋转</span>;</p>
+            <p>可添加多个属性值，注意旋转应位于最后位，旋转会改变坐标系，优先旋转会改变后位属性值的方向</p>
+            <p>效果执行完后默认还原状态</p>
+            <br>
+            <span class="tag"><a href="css3-example-2D.html" target="_blank">2D example</a></span>
+            <span class="tag"><a href="css3-example-3D.html" target="_blank">3D example</a></span>
+            <br>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">translate()</mark></th>
+                    <td data-th="translate()" class="mediaColorG">
+                        平移 <span class="tag">2D</span>
+                        <br>
+                        translateX() 水平方向平移
+                        <br>
+                        translateY() 垂直方向平移
+                    </td>
+                </tr>
+                <tr>
+                    <th>参数</th>
+                    <td data-th="参数">X轴方向平移数值</td>
+                </tr>
+                <tr>
+                    <th>参数，参数</th>
+                    <td data-th="参数，参数">X轴平移数值，y轴平移数值</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">scale()</mark></th>
+                    <td data-th="scale()" class="mediaColorG">
+                        缩放几倍 <span class="tag">2D</span>
+                        <br>
+                        从中心缩放
+                        <br>
+                        scaleX() 水平方向缩放
+                        <br>
+                        scaleY() 垂直方向缩放
+                        <br>
+                        <br>
+                        (参数) 表示X和Y方向
+                        <br>
+                        (参数，参数) 表示X方向，Y方向
+                    </td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td data-th="1">默认，不缩放</td>
+                </tr>
+                <tr>
+                    <th>数值&lt;=0.99</th>
+                    <td data-th="数值&lt;=0.99">缩小</td>
+                </tr>
+                <tr>
+                    <th>数值&gt;=1.01</th>
+                    <td data-th="数值&gt;=1.01">放大</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">rotate()</mark></th>
+                    <td data-th="rotate()" class="mediaColorG">
+                        旋转 <span class="tag">2D</span>
+                        <br>
+                        以中心点为定点顺时针旋转
+                        <br>
+                        旋转会将当前坐标系旋转
+                    </td>
+                </tr>
+                <tr>
+                    <th>0deg</th>
+                    <td data-th="0deg">默认0度</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">skew()</mark></th>
+                    <td data-th="skew()" class="mediaColorG">
+                        斜切 <span class="tag">2D</span>
+                        <br>
+                        skewX() 水平方向斜切
+                        <br>
+                        skewY() 垂直方向斜切
+                        <br>
+                        <br>
+                        正值deg，向反方向斜切(左上)
+                        <br>
+                        -负值deg，向正方向斜切(右下)
+                    </td>
+                </tr>
+                <tr>
+                    <th>参数</th>
+                    <td data-th="参数">在X轴上斜切</td>
+                </tr>
+                <tr>
+                    <th>参数，参数</th>
+                    <td data-th="参数，参数">在X轴上斜切，在Y轴斜切</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">translate3d()</mark></th>
+                    <td data-th="translate3d()" class="mediaColorG">
+                        移动 <span class="tag">3D</span>
+                        <br>
+                        translateX()
+                        <br>
+                        translateY()
+                        <br>
+                        translateZ()
+                    </td>
+                </tr>
+                <tr>
+                    <th>X,Y,Z</th>
+                    <td data-th="X,Y,Z">参照原始坐标轴偏移</td>
+                </tr>
+            </table>
+            <br>
+            <p>Z轴在三维图形内移动</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">scale3d()</mark></th>
+                    <td data-th="scale3d()" class="mediaColorG">
+                        缩放 <span class="tag">3D</span>
+                        <br>
+                        scaleX()
+                        <br>
+                        scaleY()
+                        <br>
+                        scaleZ()
+                    </td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td data-th="1">默认，不缩放</td>
+                </tr>
+                <tr>
+                    <th>数值&lt;=0.99</th>
+                    <td data-th="数值&lt;=0.99">缩小</td>
+                </tr>
+                <tr>
+                    <th>数值&gt;=1.01</th>
+                    <td data-th="数值&gt;=1.01">放大</td>
+                </tr>
+            </table>
+            <br>
+            <p>Z轴缩放关联厚度</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">rotate3d()</mark></th>
+                    <td data-th="rotate3d()" class="mediaColorG">旋转 <span class="tag">3D</span></td>
+                </tr>
+                <tr>
+                    <th>X,Y,Z,角度</th>
+                    <td data-th="">X轴上的向量值，Y轴上的向量值，Z轴上的向量值，角度</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                属性值给出的向量值代表一个方向，表示从圆心点在相应的轴上拉出到属性值的距离，数值差异不影响实现
+                <br>
+                (1,0,0,60deg)，在X轴上向上翻转
+                <br>
+                (0,1,0,60deg)，在Y轴上向右翻转
+                <br>
+                (1,1,0,60deg)，平分X和Y轴间的角度，在45deg轴上向右上翻转
+                <br>
+                (1,10,0,60deg)，Y轴上的向量值占比更多，翻转时以Y轴偏移角度最小的轴为主轴，向右上翻转
+                <br>
+                (10,1,0,60deg)，主轴靠近X轴，向上右翻转
+                <br>
+                (1,1,1,60deg)，绕三维图形内部对角线翻转
+                <br>
+                <br>
+                角度：正值仰视，负值俯视
+            </p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">transform-style:;</mark></th>
+                    <td data-th="transform-style:;" class="mediaColorG"><span class="tag">3D</span> <span class="tag">容器属性</span> 保留3D转换后的状态</td>
+                </tr>
+                <tr>
+                    <th>flat</th>
+                    <td data-th="flat">默认，不保留</td>
+                </tr>
+                <tr>
+                    <th>preserve-3d</th>
+                    <td data-th="preserve-3d">保留</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">perspective:;</mark></th>
+                    <td data-th="perspective:;" class="mediaColorG"><span class="tag">3D</span> <span class="tag">容器属性</span> 透视距离</td>
+                </tr>
+                <tr>
+                    <th>值小于三维图形底部的一半</th>
+                    <td data-th="值小于三维图形底部的一半">
+                        视角在三维图形内部
+                        <br>
+                        0，无效值，位于三维图形中间的切面
+                        <br>
+                        1px，back面呈现为点状
+                    </td>
+                </tr>
+                <tr>
+                    <th>值等于三维图形底部的一半</th>
+                    <td data-th="值等于三维图形底部的一半">视角在front面</td>
+                </tr>
+                <tr>
+                    <th>值大于三维图形底部的一半</th>
+                    <td data-th="值大于三维图形底部的一半">
+                        视角从内部移出至外部
+                        <br>
+                        值越大，back面越拉近，直至三维图形和视角的原始状态
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">perspective-origin:;</mark></th>
+                    <td data-th="perspective-origin:;" class="mediaColorG"><span class="tag">3D</span> <span class="tag">容器属性</span> 镜头视角的位置</td>
+                </tr>
+                <tr>
+                    <th>0 0</th>
+                    <td data-th="0 0">图形前后面正对屏幕</td>
+                </tr>
+                <tr>
+                    <th>X轴 Y轴</th>
+                    <td data-th="X轴 Y轴">
+                        负值，图形在轴上分别向右和向下转
+                        <br>
+                        正值，图形在轴上分别向左和向上转
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">transform-origin:;</mark></th>
+                    <td data-th="transform-origin:;" class="mediaColorG">自定义轴心点</td>
+                </tr>
+                <tr>
+                    <th>关键字</th>
+                    <td data-th="关键字">left top</td>
+                </tr>
+                <tr>
+                    <th>x y</th>
+                    <td data-th="x y">X轴 Y轴</td>
+                </tr>
+            </table>
+            <br>
+            <h2>transition 过渡</h2>
+            <p>transition:属性名称 过渡时长 时间函数 延迟显示;</p>
+            <p>指定多个过渡属性，多个简写集用逗号分隔</p>
+            <p>过渡效果执行完后默认还原状态</p>
+            <p>写在需过渡的元素样式下</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">transition-property:;</mark></th>
+                    <td data-th="transition-property:;" class="mediaColorG">
+                        应用过渡效果的属性名称
+                        <br>
+                        只能作用于给出具体值的属性
+                    </td>
+                </tr>
+                <tr>
+                    <th>none</th>
+                    <td data-th="none">没有属性有过渡效果</td>
+                </tr>
+                <tr>
+                    <th>all</th>
+                    <td data-th="all">
+                        所有属性都有过渡效果
+                        <br>
+                        <span class="tag">不建议使用</span>遍历所有属性，至效率低下
+                    </td>
+                </tr>
+                <tr>
+                    <th>指定的属性</th>
+                    <td data-th="指定的属性">多个属性以逗号分隔</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">transition-duration:;</mark></th>
+                    <td data-th="transition-duration:;" class="mediaColorG">过渡的时长</td>
+                </tr>
+            </table>
+            <br>
+            <p>&emsp;默认值0，单位为秒(s)或毫秒(ms)</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">transition-timing-function:;</mark></th>
+                    <td data-th="transition-timing-function:;" class="mediaColorG">设置时间函数，控制运动中的速度</td>
+                </tr>
+                <tr>
+                    <th>linear</th>
+                    <td data-th="linear">匀速</td>
+                </tr>
+                <tr>
+                    <th>ease</th>
+                    <td data-th="ease">默认，慢快慢</td>
+                </tr>
+                <tr>
+                    <th>ease-in</th>
+                    <td data-th="ease-in">以慢速开始</td>
+                </tr>
+                <tr>
+                    <th>ease-out</th>
+                    <td data-th="ease-out">以慢速结束</td>
+                </tr>
+                <tr>
+                    <th>ease-in-out</th>
+                    <td data-th="ease-in-out">以慢速开始和结束</td>
+                </tr>
+                <tr>
+                    <th>steps()</th>
+                    <td data-th="steps()">
+                        跳跃状
+                        <br>
+                        步长值，分为几次来完成
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd" id="animationPst">
+                    <th><mark class="boldFontWeight">transition-delay:;</mark></th>
+                    <td data-th="transition-delay:;" class="mediaColorG">延迟过渡效果</td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        <br>
+        <br>
+        <!-- 动画 -->
+        <section>
+            <br>
+            <br>
+            <h2>animation & @keyframes 动画</h2>
+            <br>
+            <p>animation:; 添加动画效果</p>
+            <br>
+            <span class="tag"><a href="css3-example-animation.html" target="_blank">animation example</a></span>
+            <br>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">animation-name:;</mark></th>
+                    <td data-th="animation-name:;" class="mediaColorG">定义@keyframes的动画名</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">animation-duration:;</mark></th>
+                    <td data-th="animation-duration:;" class="mediaColorG">动画时长</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">animation-iteration-count:;</mark></th>
+                    <td data-th="animation-iteration-count:;" class="mediaColorG">动画播放次数</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td data-th="1">默认值</td>
+                </tr>
+                <tr>
+                    <th>infinite</th>
+                    <td data-th="infinite">无限的</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">animation-direction:;</mark></th>
+                    <td data-th="animation-direction:;" class="mediaColorG">动画播放方向</td>
+                </tr>
+                <tr>
+                    <th>alternate</th>
+                    <td data-th="alternate">执行完动画后，按路径返回</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">animation-delay:;</mark></th>
+                    <td data-th="animation-delay:;" class="mediaColorG">动画延迟</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">animation-fill-mode:;</mark></th>
+                    <td data-th="animation-fill-mode:;" class="mediaColorG">动画执行状态</td>
+                </tr>
+                <tr>
+                    <th>forwards</th>
+                    <td data-th="forwards">保留动画执行后的状态</td>
+                </tr>
+                <tr>
+                    <th>backwards</th>
+                    <td data-th="backwards">(设有动画延迟)起始状态为执行transform的状态</td>
+                </tr>
+                <tr>
+                    <th>both</th>
+                    <td data-th="both">既保留结束状态(forwards)也初始状态(backwards)</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">animation-timing-function:;</mark></th>
+                    <td data-th="animation-timing-function:;" class="mediaColorG">动画的时间函数，控制运动中的速度</td>
+                </tr>
+                <tr>
+                    <th>linear</th>
+                    <td data-th="linear">匀速</td>
+                </tr>
+                <tr>
+                    <th>ease</th>
+                    <td data-th="ease">默认，慢快慢</td>
+                </tr>
+                <tr>
+                    <th>ease-in</th>
+                    <td data-th="ease-in">以慢速开始</td>
+                </tr>
+                <tr>
+                    <th>ease-out</th>
+                    <td data-th="ease-out">以慢速结束</td>
+                </tr>
+                <tr>
+                    <th>ease-in-out</th>
+                    <td data-th="ease-in-out">以慢速开始和结束</td>
+                </tr>
+                <tr>
+                    <th>steps()</th>
+                    <td data-th="steps()">
+                        跳跃状
+                        <br>
+                        步长值，分为几次来完成
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">animation-play-state:;</mark></th>
+                    <td data-th="animation-play-state:;" class="mediaColorG">暂停播放</td>
+                </tr>
+                <tr>
+                    <th>paused</th>
+                    <td data-th="paused">暂停</td>
+                </tr>
+                <tr>
+                    <th>running</th>
+                    <td data-th="running">运行</td>
+                </tr>
+            </table>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;input type="button" value="播放" id="running"&gt;
+                    <br>
+                    &lt;input type="button" value="暂停" id="paused"&gt;
+                    <br>
+                    &lt;script&gt;
+                    <br>
+                    &emsp;var 动画容器=document.querySelector("动画容器");
+                    <br>
+                    &emsp;document.querySelector("running").onclick=function(){
+                    <br>
+                    &emsp;&emsp;动画容器.style.animationPlayState="running";
+                    <br>
+                    &emsp;}
+                    <br>
+                    &emsp;document.querySelector("paused").onclick=function(){
+                    <br>
+                    &emsp;&emsp;动画容器.style.animationPlayState="paused";
+                    <br>
+                    &emsp;}
+                    <br>
+                    &lt;/script&gt;
+                </div>
+            </div>
+            <br>
+            <h2>@keyframes 创建动画</h2>
+            <div class="pre">
+                <div class="preContainer">
+                    @keyframes 动画名{
+                    <br>
+                    &emsp;0%<span class="colorGray">/from</span>{}
+                    <br>
+                    &emsp;100%<span class="colorGray">/to</span>{}
+                    <br>
+                    &emsp;<span class="colorGray">整个动画耗时的百分比</span>
+                    <br>
+                    }
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

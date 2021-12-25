@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Example</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        html,body{
+            height:100%;
+        }
+        html{
+            font-size:10px;
+            color:#4BD9B3;
+            font-family:"Verdana";
+        }
+        body{
+            font-size:1.5rem;
+            background:#F9F9F9;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        p{
+            font-size:8rem;
+            transition:transform 1s;
+            cursor:pointer;
+            user-select:none;
+            font-weight:bold;
+        }
+        .s{
+            transform:translate(-125px) rotate(-360deg);
+        }
+        .b{
+            transform:translate(125px);
+        }
+        :active p{
+            transform:none;
+        }
+    </style>
+</head>
+<body>
+    <p class="b">B</p>
+    <p class="u">U</p>
+    <p class="s">S</p>
+</body>
+</html>

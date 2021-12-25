@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/htmlH5.css">
+</head>
+<body>
+    <header>
+        <label for="menuBtn" class="menuBtn-label">
+            <svg>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="html.html">HTML</a>
+                <a href="htmlH5.html" class="current-a">H5</a>
+                <a href="htmlDisplay.html">Display</a>
+                <a href="htmlForm.html">Form</a>
+                <a href="htmlStructure.html">Structure</a>
+                <a href="htmlEntity.html">Entity</a>
+            </div>
+        </nav>
+        <div class="inPageNav">
+            <div class="inPageNavContainer">
+                <a href="#multimediaPst">多媒体</a>
+                <a href="#semanticPst">语义</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Hypertext Markup Language 5.0</h2>
+            <p>W3C于2014年10月完成标准制定.</p>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    DOCTYPE声明
+                    <br>
+                    <span>&lt;!DOCTYPE html&gt;</span>
+                </div>
+            </div>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    字符编码的声明
+                    <br>
+                    <span>&lt;meta charset="UTF-8"&gt;</span>
+                </div>
+            </div>
+            <br>
+            <p>也会被认为是一套技术组合，包括页面素材预加载技术，音乐加载播放技术，可滑动页面，涂抹擦除功能，动态文字图片..</p>
+        </section>
+        <br id="multimediaPst">
+        <br>
+        <br>
+        <br>
+        <!-- 多媒体 -->
+        <section>
+            <br>
+            <br>
+            <br>
+            <!-- audio -->
+            <article>
+                <h2>&lt;audio&gt; 在网页中嵌入音频</h2>
+                <p>
+                    &lt;<mark>audio</mark> src="" controls loop&gt;
+                    <br>
+                    controls属性添加控件，例如播放，暂停和音量
+                    <br>
+                    loop属性表示循环播放
+                </p>
+                <audio src="../audio/thisIsAPuppy.mp3" controls loop></audio>
+            </article>
+            <!-- video -->
+            <article>
+                <h2>&lt;video&gt; 在网页中嵌入视频</h2>
+                <p>
+                    &lt;<mark>video</mark> src="" controls loop&gt;
+                    <br>
+                    应始终设置width height,否则加载视频时页面可能会闪烁
+                    <br>
+                    标签之间的文本仅在不支持该元素的浏览器中显示
+                </p>
+                <video src="../video/thisIsAKitten.mp4" controls loop></video>
+            </article>
+            <p>
+                &lt;source src="" type="媒体类型"&gt;
+                <br>
+                添加不同格式的媒体文件，供浏览器选择可识别格式
+                <br>
+                可指定多种媒体形式，诸如&lt;video&gt;,&lt;audio&gt;,&lt;picture&gt;
+            </p>
+            <br>
+            <br>
+            <div class="mediaType">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>File Format</th>
+                            <th>Media Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MP3</td>
+                            <td>audio/mpeg</td>
+                        </tr>
+                        <tr>
+                            <td>WAV</td>
+                            <td>audio/wav</td>
+                        </tr>
+                        <tr>
+                            <td>OGG</td>
+                            <td>audio/ogg</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>File Format</th>
+                            <th>Media Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MP4</td>
+                            <td>video/mp4</td>
+                        </tr>
+                        <tr>
+                            <td>WebM</td>
+                            <td>video/webm</td>
+                        </tr>
+                        <tr>
+                            <td>Ogg</td>
+                            <td>video/ogg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+            <table class="browserSupport-table">
+                <thead>
+                    <tr>
+                        <th>Browser</th>
+                        <th>MP3</th>
+                        <th>MAV</th>
+                        <th>OGG</th>
+                        <th>MP4</th>
+                        <th>WebM</th>
+                        <th>Ogg</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-th="Browser"><img src="../assets/microsoft-edge-logo.svg" title="Edge" alt="Edge/IE"></td>
+                        <td data-th="MP3">YES</td>
+                        <td data-th="MAV"><span class="colorR">NO</span></td>
+                        <td data-th="OGG"><span class="colorR">NO</span></td>
+                        <td data-th="MP4">YES</td>
+                        <td data-th="WebM"><span class="colorR">NO</span></td>
+                        <td data-th="Ogg"><span class="colorR">NO</span></td>
+                    </tr>
+                    <tr>
+                        <td data-th="Browser"><img src="../assets/chrome-logo.svg" title="Chrome" alt="Chrome"></td>
+                        <td data-th="MP3">YES</td>
+                        <td data-th="MAV">YES</td>
+                        <td data-th="OGG">YES</td>
+                        <td data-th="MP4">YES</td>
+                        <td data-th="WebM">YES</td>
+                        <td data-th="Ogg">YES</td>
+                    </tr>
+                    <tr>
+                        <td data-th="Browser"><img src="../assets/firefox-Logo.svg" title="Firefox" alt="Firefox"></td>
+                        <td data-th="MP3">YES</td>
+                        <td data-th="MAV">YES</td>
+                        <td data-th="OGG">YES</td>
+                        <td data-th="MP4">YES</td>
+                        <td data-th="WebM">YES</td>
+                        <td data-th="Ogg">YES</td>
+                    </tr>
+                    <tr>
+                        <td data-th="Browser"><img src="../assets/safari-logo.svg" title="Safari" alt="Safari"></td>
+                        <td data-th="MP3">YES</td>
+                        <td data-th="MAV">YES</td>
+                        <td data-th="OGG"><span class="colorR">NO</span></td>
+                        <td data-th="MP4">YES</td>
+                        <td data-th="WebM"><span class="colorR">NO</span></td>
+                        <td data-th="Ogg"><span class="colorR">NO</span></td>
+                    </tr>
+                    <tr>
+                        <td data-th="Browser"><img src="../assets/opera-logo.svg" title="Opera" alt="Opera"></td>
+                        <td data-th="MP3">YES</td>
+                        <td data-th="MAV">YES</td>
+                        <td data-th="OGG">YES</td>
+                        <td data-th="MP4">YES</td>
+                        <td data-th="WebM">YES</td>
+                        <td data-th="Ogg">YES</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <br id="semanticPst">
+        <br>
+        <br>
+        <br>
+        <!-- 语义 -->
+        <section>
+            <br>
+            <br>
+            <br>
+            <article>
+                <h2>&lt;header&gt; 定义头部</h2>
+                <p>
+                    定义文档或部分的头部，或一组&lt;nav&gt;的容器
+                    <br>
+                    不能被放置在&lt;footer&gt;&lt;address&gt;&lt;header&gt;内
+                    <br>
+                    默认display:block;
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;nav&gt; 定义一组导航链接</h2>
+                <p>
+                    仅用于主要的导航链接块，并非文档的所有链接都应位于该元素内
+                    <br>
+                    默认display:block;
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;main&gt; 定义主要内容</h2>
+                <p>
+                    一个文档中仅有一个该元素
+                    <br>
+                    不能被放置在&lt;header&gt;&lt;nav&gt;&lt;article&gt;&lt;aside&gt;&lt;footer&gt;内
+                    <br>
+                    默认display:block;
+                    <br>
+                    <span class="browser ie">IE</span> 默认display:inline;
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;section&gt; 定义部分</h2>
+                <p>
+                    如章节，页眉，页脚，或任何其他部分
+                    <br>
+                    默认display:block;
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;article&gt; 定义文章</h2>
+                <p>
+                    如帖子，文章，新闻，评论
+                    <br>
+                    默认display:block;
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;aside&gt; 定义附属信息</h2>
+                <p>
+                    可定义部分附属信息，如&lt;article&gt;内的侧边栏，内容可能包含文章相关资料，解释
+                    <br>
+                    可定义全局附属信息，内容可能包含广告，文章列表，友情链接
+                    <br>
+                    默认display:block;
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;footer&gt; 定义页脚</h2>
+                <p>
+                    定义文档或部分的页脚，内容可能包含作者信息，版权信息，联系方式，网站地图，回顶部链接，相关文件
+                    <br>
+                    该元素内的联系方式应放在&lt;address&gt;内
+                    <br>
+                    默认display:block;
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;figure&gt; 定义独立于上下文的单元</h2>
+                <p>
+                    &lt;<mark>figure</mark>&gt;&lt;<mark>figcaption</mark>&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+                    <br>
+                    &lt;figure&gt;可以包含图片，视频，音频，代码块，广告
+                    <br>
+                    &lt;figcaption&gt;用于说明&lt;figure&gt;，需为&lt;figure&gt;的第一个或最后一个子元素
+                    <br>
+                    figure默认display:block; margin:1em 40px 1em 40px;
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;mark&gt; 定义突出显示的标记文本</h2>
+                <p>默认background:yellow; color:black;</p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;time&gt; 定义日期和24小时制时间</h2>
+                <p>
+                    内容可包含时间状语，节日名称
+                    <br>
+                    &lt;time datetime="年-月-天T时:分:秒时区标识符"&gt;
+                    <br>
+                    datetime属性在该元素中未指定日期或时间时，用于规定日期或时间
+                </p>
+            </article>
+            <br>
+            <article>
+                <h2>&lt;details&gt; 点击显示或隐藏</h2>
+                <p>
+                    &lt;<mark>details</mark> open&gt;&lt;<mark>summary</mark>&gt;可见标题&lt;/summary&gt;&lt;p&gt;隐藏内容&lt;/p&gt;&lt;/details&gt;
+                    <br>
+                    &lt;details&gt;用于创建一个交互式小部件，用户可以按需查看或隐藏的其他详细信息
+                    <br>
+                    &lt;summary&gt;定义可见标题
+                    <br>
+                    open属性默认隐藏信息对用户可见
+                    <br>
+                    <span class="browser ie">IE</span> <span class="colorR">Not supported</span>
+                    <br>
+                    details默认display:block;
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

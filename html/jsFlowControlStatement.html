@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Control Statement</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/jsFlowControlStatement.css">
+</head>
+<body>
+    <header id="unaryPosition">
+        <label for="menuBtn" class="menuBtn-label">
+            <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="../html/js.html">ES</a>
+                <a href="../html/js6.html">ES6</a>
+                <a href="../html/jsDataType.html">Data Type</a>
+                <a href="../html/jsObject.html">Object</a>
+                <a href="../html/jsOperator.html">Operator</a>
+                <a href="../html/jsFlowControlStatement.html" class="current-a">Flow Control Statement</a>
+            </div>
+        </nav>
+        <div class="inPageNav">
+            <div class="inPageNavContainer"></div>
+        </div>
+    </header>
+    <main>
+        <!-- if语句 -->
+        <section>
+            <h2>条件判断语句 | if语句</h2>
+            <p>
+                对条件表达式进行求值判断，根据布尔值结果执行不同语句
+                <br>
+                <br>
+                语句和语句间可嵌套
+                <br>
+                一个代码块被执行后结束整条语句
+                <br>
+                <br>
+                开发中尽量写代码块，使结构更清晰
+            </p>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    <span class="colorPurple">if</span>(条件表达式){
+                    <br>
+                    &emsp;语句
+                    <br>
+                    }
+                </div>
+            </div>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    <span class="colorPurple">if</span>(条件表达式){
+                    <br>
+                    &emsp;语句
+                    <br>
+                    }<span class="colorPurple">else</span>{
+                    <br>
+                    &emsp;语句
+                    <br>
+                    }
+                </div>
+            </div>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    <span class="colorPurple">if</span>(条件表达式){
+                    <br>
+                    &emsp;语句
+                    <br>
+                    }<span class="colorPurple">else if</span>(条件表达式){
+                    <br>
+                    &emsp;语句
+                    <br>
+                    }<span class="colorPurple">else</span>{
+                    <br>
+                    &emsp;语句
+                    <br>
+                    }
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- switch语句 -->
+        <section>
+            <br>
+            <br>
+            <h2>条件分支语句 | switch语句</h2>
+            <p>
+                执行时依次将case后的值和条件表达式的值全等比较
+                <br>
+                值为true从当前case处开始执行代码
+                <br>
+                值为false继续向下比较
+                <br>
+                <span class="colorPurple">break</span>退出switch语句
+                <br>
+                <span class="colorPurple">default</span>默认执行位置，所有结果为false时执行
+                <br>
+                <br>
+                {case 值: 语句 break;}可多次使用
+            </p>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    <span class="colorPurple">switch</span>(条件表达式){
+                    <br>
+                    &emsp;<span class="colorPurple">case</span> 值:
+                    <br>
+                    &emsp;&emsp;&emsp;语句
+                    <br>
+                    &emsp;&emsp;&emsp;<span class="colorPurple">break</span>;
+                    <br>
+                    &emsp;<span class="colorPurple">default</span>:
+                    <br>
+                    &emsp;&emsp;&emsp;语句
+                    <br>
+                    &emsp;&emsp;&emsp;<span class="colorPurple">break</span>;
+                    <br>
+                    }
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- while循环 -->
+        <section>
+            <br>
+            <br>
+            <h2>循环语句 | while语句</h2>
+            <p>
+                反复执行一段代码
+                <br>
+                while里代码块称为循环体
+                <br>
+                <br>
+                创建循环的3种构成要素:
+                <br>
+                ①初始化变量
+                <br>
+                <span class="var">var</span> i=0;
+                <br>
+                ②在循环中设置条件表达式
+                <br>
+                <span class="colorPurple">while</span>(条件表达式)
+                <br>
+                ③定义更新表达式
+                <br>
+                每循环一次更新一次初始变量
+                <br>
+                i<span class="operator">++</span>;
+            </p>
+            <br>
+            <br>
+            <p>
+                <span class="boldFontWeight">while循环</span> <span class="tag">先判断后执行</span>
+                <br>
+                判断条件表达式，值为true执行循环体，直至值为false终止循环
+            </p>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    <span class="var">var</span> i=0;
+                    <br>
+                    <span class="colorPurple">while</span>(条件表达式){
+                    <br>
+                    &emsp;语句
+                    <br>
+                    &emsp;i<span class="operator">++</span>;
+                    <br>
+                    }
+                </div>
+            </div>
+            <br>
+            <p>
+                <span class="boldFontWeight">do..while循环</span> <span class="tag">先执行后判断</span>
+                <br>
+                执行循环体后对条件表达式进行判断
+                <br>
+                值为true继续执行循环体
+                <br>
+                值为false终止循环
+                <br>
+                <br>
+                循环体在判断前会被执行1次
+            </p>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    <span class="var">var</span> i=0;
+                    <br>
+                    <span class="colorPurple">do</span>{
+                    <br>
+                    &emsp;语句
+                    <br>
+                    &emsp;i<span class="operator">++</span>;
+                    <br>
+                    }<span class="colorPurple">while</span>(条件表达式)
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>循环语句 | for循环</h2>
+            <p>
+                循环中的三个部分可以写在外部
+                <br>
+                <span class="colorR">*</span>分号不能省略
+                <br>
+                <br>
+                <span class="boldFontWeight">语法:</span>
+                <br>
+                for(①初始化表达式; ②条件表达式; ④更新表达式){
+                <br>
+                &emsp;③语句
+                <br>
+                }
+                <br>
+                <br>
+                <span class="boldFontWeight">执行流程:</span>
+                <br>
+                ①初始化表达式(只会执行一次)
+                <br>
+                ②条件表达式判断是否执行循环
+                <br>
+                ③true执行循环体，false终止循环
+                <br>
+                ④执行更新表达式，继续判断条件表达式
+            </p>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    <span class="colorPurple">for</span>(<span class="colorPurple">var</span> i=0; 条件表达式; i<span class="operator">++</span>){
+                    <br>
+                    &emsp;语句
+                    <br>
+                    }
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

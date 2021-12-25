@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/htmlDisplay.css">
+</head>
+<body>
+    <header>
+        <label for="menuBtn" class="menuBtn-label">
+            <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="html.html">HTML</a>
+                <a href="htmlH5.html">H5</a>
+                <a href="htmlDisplay.html" class="current-a">Display</a>
+                <a href="htmlForm.html">Form</a>
+                <a href="htmlStructure.html">Structure</a>
+                <a href="htmlEntity.html">Entity</a>
+            </div>
+        </nav>
+        <div class="inPageNav"></div>
+    </header>
+    <main>
+        <section>
+            <h2>block</h2>
+            <p>独行</p>
+            <p>全宽</p>
+            <p>宽高可设</p>
+            <br>
+            <p>同胞元素，相邻margin重叠，取最大值</p>
+            <div class="tagList-div">
+                <p>&lt;div&gt;</p>
+                <p>&lt;h1&gt;</p>
+                <p>&lt;p&gt;</p>
+                <p>&lt;table&gt;</p>
+                <p>&lt;ul&gt;</p>
+                <p>&lt;li&gt;</p>
+                <p>&lt;form&gt;</p>
+                <p>&lt;video&gt;</p>
+                <p>&lt;header&gt;</p>
+                <p>&lt;nav&gt;</p>
+                <p>&lt;main&gt;</p>
+                <p>&lt;section&gt;</p>
+                <p>&lt;article&gt;</p>
+                <p>&lt;aside&gt;</p>
+                <p>&lt;footer&gt;</p>
+                <p>&lt;figure&gt;</p>
+                <p>&lt;details&gt;</p>
+                <p class="placeholder"></p>
+                <p class="placeholder"></p>
+                <p class="placeholder"></p>
+            </div>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>inline</h2>
+            <p>同行</p>
+            <p>内容宽</p>
+            <p>宽高不可设</p>
+            <br>
+            <p>清除产生的间隙，该元素{font-size:0;}</p>
+            <div class="tagList-div">
+                <p>&lt;a&gt;</p>
+                <p>&lt;span&gt;</p>
+                <p>&lt;button&gt;</p>
+                <p>&lt;time&gt;</p>
+                <p>&lt;br&gt;</p>
+                <p>&lt;script&gt;</p>
+                <p>&lt;label&gt;</p>
+                <p class="placeholder"></p>
+                <p class="placeholder"></p>
+                <p class="placeholder"></p>
+            </div>
+            <br>
+            <p>&lt;label&gt;没有特别的样式考虑，结构上是简单的行内元素</p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>inline-block</h2>
+            <p>同行</p>
+            <p>内容宽</p>
+            <p>宽高可设</p>
+            <br>
+            <p>清除产生的间隙，双亲元素{font-size:0;}，该方法会使子元素&lt;br&gt;&lt;p&gt;不显示需为其单独设置font-size，但Chrome和Opera中为&lt;br&gt;设置font-size无效，该情况下需为inline-block元素创建父级容器</p>
+            <br>
+            <p>默认底部对齐，顶部对齐{vertical-align:top;}</p>
+            <div class="tagList-div">
+                <p>&lt;img&gt;</p>
+                <p>&lt;input&gt;</p>
+                <p class="placeholder"></p>
+                <p class="placeholder"></p>
+            </div>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>table</h2>
+            <table>
+                <tr>
+                    <th>table</th>
+                    <td>&lt;table&gt;</td>
+                </tr>
+                <tr>
+                    <th>inline-table</th>
+                    <td>内联&lt;table&gt;</td>
+                </tr>
+                <tr>
+                    <th>table-header-group</th>
+                    <td>&lt;thead&gt;</td>
+                </tr>
+                <tr>
+                    <th>table-row-group</th>
+                    <td>
+                        &lt;tbody&gt;
+                        <br>
+                        宽高不可设
+                    </td>
+                </tr>
+                <tr>
+                    <th>table-row</th>
+                    <td>&lt;tr&gt;</td>
+                </tr>
+                <tr>
+                    <th>table-cell</th>
+                    <td>&lt;td&gt;</td>
+                </tr>
+                <tr>
+                    <th>table-footer-group</th>
+                    <td>&lt;tfoot&gt;</td>
+                </tr>
+            </table>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;div class="table"&gt;
+                    <br>
+                    |&emsp;&lt;div class="tr"&gt;
+                    <br>
+                    |&emsp;|&emsp;&lt;div class="td"&gt;&lt;/div&gt;
+                    <br>
+                    |&emsp;|&emsp;&lt;div class="td"&gt;&lt;/div&gt;
+                    <br>
+                    |&emsp;&lt;/div&gt;
+                    <br>
+                    &lt;/div&gt;
+                </div>
+            </div>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    .table{display:table;}
+                    <br>
+                    .tr{display:table-row;}
+                    <br>
+                    .td{display:table-cell;}
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

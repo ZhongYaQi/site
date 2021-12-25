@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/html.css">
+</head>
+<body>
+    <header id="tablePst">
+        <label for="menuBtn" class="menuBtn-label">
+            <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="html.html" class="current-a">HTML</a>
+                <a href="htmlH5.html">H5</a>
+                <a href="htmlDisplay.html">Display</a>
+                <a href="htmlForm.html">Form</a>
+                <a href="htmlStructure.html">Structure</a>
+                <a href="htmlEntity.html">Entity</a>
+            </div>
+        </nav>
+        <div class="inPageNav">
+            <div class="inPageNavContainer">
+                <a href="#tablePst">Table</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>&lt;Table&gt; 表格</h2>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;<mark>table</mark>&gt;
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;thead&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;tr&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;</span>&lt;<mark>th</mark> colspan="" rowspan=""&gt;&lt;/th&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;</span>colspan属性规定横向合并单元格的个数
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;</span>rowspan属性规定纵向合并单元格的个数
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;/tr&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;/thead&gt;
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;tbody&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;tr&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|&emsp;</span>&lt;<mark>td</mark> colspan="" rowspan=""&gt;&lt;/td&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;|&emsp;</span>&lt;tr&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;/tbody&gt;
+                    <br>
+                    <span class="colorGray">|&emsp;</span>tbody的display属性为table-row-group
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    <span class="colorGray">|&emsp;</span>&lt;tfoot&gt;&lt;/tfoot&gt;
+                    <br>
+                    <span class="colorGray">|</span>
+                    <br>
+                    &lt;/table&gt;
+                </div>
+            </div>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    table{border-collapse:collapse;} <span class="tag">CSS2</span>
+                    <br>
+                    <span class="colorGray">合并相邻边框</span>
+                </div>
+            </div>
+            <br>
+            <br>
+            <h2>响应式表格</h2>
+            <br>
+            <div class="demoResponsiveTable">
+                <div class="table">
+                    <div class="tr">
+                        <div class="th">TH1</div>
+                        <div class="th">TH2</div>
+                        <div class="th">TH3</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">td1</div>
+                        <div class="td">td2</div>
+                        <div class="td">td3</div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="table">
+                    <div class="tr">
+                        <div class="th">TH1</div>
+                        <div class="td">td1</div>
+                    </div>
+                </div>
+                <br>
+                <div class="table">
+                    <div class="tr">
+                        <div class="th">TH2</div>
+                        <div class="td">td2</div>
+                    </div>
+                </div>
+                <br>
+                <div class="table">
+                    <div class="tr">
+                        <div class="th">TH3</div>
+                        <div class="td">td3</div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="dmstrt-table">
+                <table>
+                    <tr>
+                        <th>TH1</th>
+                        <th>TH2</th>
+                        <th>TH3</th>
+                    </tr>
+                    <tr>
+                        <td>td1</td>
+                        <td>td2</td>
+                        <td>td3</td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <th>TH1</th>
+                        <td>td1</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <th>TH2</th>
+                        <td>td2</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <th>TH3</th>
+                        <td>td3</td>
+                    </tr>
+                </table>
+            </div> -->
+            <br>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;table&gt;
+                    <br>
+                    |&emsp;<span class="htmlColor">&lt;thead&gt;</span>
+                    <br>
+                    |&emsp;|&emsp;&lt;tr&gt;
+                    <br>
+                    |&emsp;|&emsp;|&emsp;&lt;th&gt;TH1&lt;/th&gt;
+                    <br>
+                    |&emsp;|&emsp;|&emsp;&lt;th&gt;TH2&lt;/th&gt;
+                    <br>
+                    |&emsp;|&emsp;|&emsp;&lt;th&gt;TH3&lt;/th&gt;
+                    <br>
+                    |&emsp;|&emsp;&lt;/tr&gt;
+                    <br>
+                    |&emsp;<span class="htmlColor">&lt;/thead&gt;</span>
+                    <br>
+                    |&emsp;&lt;tbody&gt;
+                    <br>
+                    |&emsp;|&emsp;&lt;tr&gt;
+                    <br>
+                    |&emsp;|&emsp;|&emsp;<span class="htmlColor">&lt;td</span> <span class="cssColor">data-th</span>="TH1"<span class="htmlColor">&gt;</span>td1<span class="htmlColor">&lt;/td&gt;</span>
+                    <br>
+                    |&emsp;|&emsp;|&emsp;<span class="htmlColor">&lt;td</span> <span class="cssColor">data-th</span>="TH2"<span class="htmlColor">&gt;</span>td2<span class="htmlColor">&lt;/td&gt;</span>
+                    <br>
+                    |&emsp;|&emsp;|&emsp;<span class="htmlColor">&lt;td</span> <span class="cssColor">data-th</span>="TH3"<span class="htmlColor">&gt;</span>td3<span class="htmlColor">&lt;/td&gt;</span>
+                    <br>
+                    |&emsp;|&emsp;&lt;/tr&gt;
+                    <br>
+                    |&emsp;&lt;/tbody&gt;
+                    <br>
+                    &lt;/table&gt;
+                </div>
+            </div>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    table{border-collapse:collapse;}
+                    <br>
+                    tr{border:1px solid #e0e0e0;}
+                    <br>
+                    @media(max-width:px){
+                    <br>
+                    &emsp;<span class="htmlColor">thead</span>{display:none;}
+                    <br>
+                    &emsp;<span class="htmlColor">tr</span>{display:block;margin-bottom:1rem;}
+                    <br>
+                    &emsp;<span class="colorGray">使行独立并分开</span>
+                    <br>
+                    &emsp;<span class="htmlColor">td</span>{display:block;border-bottom:1px solid #e0e0e0;text-align:right;}
+                    <br>
+                    &emsp;<span class="colorGray">使单元格独行,划分新的表格结构</span>
+                    <br>
+                    &emsp;<span class="htmlColor">td</span>:before{content:attr(<span class="cssColor">data-th</span>);float:left;}
+                    <br>
+                    &emsp;<span class="colorGray">在td内容之前插入调用data-th属性存储的数据</span>
+                    <br>
+                    }
+                </div>
+            </div>
+            <br>
+            <p><span class="h5">H5</span> data-*属性能在所有HTML元素上存储自定义数据</p>
+        </section>
+    </main>
+</body>
+</html>

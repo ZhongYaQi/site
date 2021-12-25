@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/css.css">
+</head>
+<body>
+    <header id="backgroundPst">
+        <label for="menuBtn" class="menuBtn-label">
+            <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="css.html" class="current-a">CSS</a>
+                <a href="css3.html">CSS3</a>
+                <a href="cssResponsiveLayout.html">Responsive Layout</a>
+                <a href="cssSelector.html">Selector</a>
+                <a href="cssUnits.html">Units</a>
+            </div>
+        </nav>
+        <div class="inPageNav">
+            <div class="inPageNavContainer">
+                <a href="#backgroundPst">Background</a>
+                <a href="#overflowPst">Overflow</a>
+                <a href="#borderPst">Border</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Background</h2>
+            <br>
+            <p>backgroun:颜色 图像 重复 固定;</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>background-color:;</mark></th>
+                    <td data-th="background-color:;" class="mediaColorG"><span class="css1">CSS1</span> 背景色</td>
+                </tr>
+                <tr>
+                    <th>十六进制</th>
+                    <td data-th="十六进制">#fff</td>
+                </tr>
+                <tr>
+                    <th>RGB</th>
+                    <td data-th="RGB">rgb(0,0,0)</td>
+                </tr>
+                <tr>
+                    <th>RGBA</th>
+                    <td data-th="RGBA">rgba(0,0,0,0.5)</td>
+                </tr>
+                <tr>
+                    <th>HSL</th>
+                    <td data-th="HSL">hsl(193,100%,50%)</td>
+                </tr>
+                <tr>
+                    <th>HSLA</th>
+                    <td data-th="HSLA">hsla(193,100%,50%,0.5)</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                A:透明度 取值0-1之间
+                <br>
+                H:色相 S:饱和度 L:亮度
+            </p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>background-image:;</mark></th>
+                    <td data-th="background-image:;" class="mediaColorG">背景图像 | 渐变</td>
+                </tr>
+                <tr>
+                    <th>url(&quot;&quot;),url(&quot;&quot;)</th>
+                    <td data-th="url(&quot;&quot;),url(&quot;&quot)"><span class="css1">CSS1</span> 一个或多个背景图像</td>
+                </tr>
+                <tr>
+                    <th>linear-gradient(,)</th>
+                    <td data-th="linear-gradient(,)"><span class="css3">CSS3</span> 线性渐变</td>
+                </tr>
+                <tr>
+                    <th>repeating-linear-gradient(,)</th>
+                    <td data-th="repeating-linear-gradient(,)"><span class="css3">CSS3</span> 重复线性渐变</td>
+                </tr>
+                <tr>
+                    <th>radial-gradient(,)</th>
+                    <td data-th="radial-gradient(,)"><span class="css3">CSS3</span> 径向渐变</td>
+                </tr>
+                <tr>
+                    <th>repeating-radial-gradient(,)</th>
+                    <td data-th="radial-gradient(,)"><span class="css3">CSS3</span> 重复径向渐变</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                默认垂直和水平方向重复，取消重复background-repeat:no-repeat;
+                <br>
+                <br>
+                渐变属性中可定义
+                <br>
+                <span class="boldFontWeight">起止颜色</span>:由色值及过渡终止位置数值组成
+            </p>
+            <br>
+            <p>
+                线性渐变中可增定义
+                <br>
+                <span class="boldFontWeight">角度方向</span>:取值0deg-360deg之间，默认180deg
+            </p>
+            <div class="pre">
+                <div class="preContainer">background-image:linear-gradient(180deg,#ffe1aa,#4BD9B3);</div>
+            </div>
+            <div class="gradientDemonstration gradientDemonstration-linear-angleDirection"></div>
+            <br>
+            <p>
+                <span class="boldFontWeight">四面指向</span>:to right，从左到右 | to right bottom，从左上角到右下角
+            </p>
+            <div class="pre">
+                <div class="preContainer">background-image:linear-gradient(to bottom,#ffe1aa,#4BD9B3);</div>
+            </div>
+            <div class="gradientDemonstration gradientDemonstration-linear-direction"></div>
+            <br>
+            <br>
+            <p>
+                径向渐变中可增定义
+                <br>
+                <span class="boldFontWeight">圆的形状</span>:ellipse 默认椭圆形 | circle 圆形
+                <br>
+                <span class="boldFontWeight">圆心位置</span>:center 默认 | top | bottom | X轴 Y轴
+                <br>
+                <span class="boldFontWeight">半径长度</span>:
+                <br>
+                farthest-corner，默认，从圆心到容器最远角的距离
+            </p>
+            <div class="pre">
+                <div class="preContainer">background-image:radial-gradient(circle farthest-corner at 30% 40%,#ffe1aa,#4BD9B3);</div>
+            </div>
+            <div class="gradientDemonstration gradientDemonstration-radial-farthestCorner"></div>
+            <br>
+            <p>closest-corner at (圆心在)x轴 (圆心在)y轴，从圆心到容器最近角的距离</p>
+            <div class="pre">
+                <div class="preContainer">background-image:radial-gradient(circle closest-corner at 30% 40%,#ffe1aa,#4BD9B3);</div>
+            </div>
+            <div class="gradientDemonstration gradientDemonstration-radial-closestCorner"></div>
+            <br>
+            <p>farthest-side at (圆心在)x轴 (圆心在)y轴，从圆心到容器最远边的距离</p>
+            <div class="pre">
+                <div class="preContainer">background-image:radial-gradient(farthest-side at 30% 40%,#ffe1aa,#4BD9B3);</div>
+            </div>
+            <div class="gradientDemonstration gradientDemonstration-radial-farthestEdge"></div>
+            <br>
+            <p>closest-side at (圆心在)x轴 (圆心在)y轴，从圆心到容器最近边的距离</p>
+            <div class="pre">
+                <div class="preContainer">background-image:radial-gradient(circle closest-side at 30% 40%,#ffe1aa,#4BD9B3);</div>
+            </div>
+            <div class="gradientDemonstration gradientDemonstration-radial-closestEdge"></div>
+            <br>
+            <div class="boldFontWeight">实现文字渐变</div>
+            <div class="pre">
+                <div class="preContainer">
+                    background: linear-gradient(to right,#4BD9B3,#ffe1aa);
+                    <br>
+                    background-clip:text;
+                    <br>
+                    -webkit-background-clip:text;
+                    <br>
+                    color:transparent;
+                </div>
+            </div>
+            <div class="gradientDemonstration-text"><span>TEXT GRADIENT</span></div>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>background-position:;</mark></th>
+                    <td data-th="background-position:;" class="mediaColorG"><span class="css1">CSS1</span> 图像位置</td>
+                </tr>
+                <tr>
+                    <th>关键字</th>
+                    <td data-th="关键字">
+                        left center
+                        <br>
+                        如仅指定一个值，另一个值则为center
+                    </td>
+                </tr>
+                <tr>
+                    <th>数值单位</th>
+                    <td data-th="数值单位">
+                        0% 0% | 3px 3px
+                        <br>
+                        左上角0% 0%，右下角100% 100%
+                        <br>
+                        如仅指定一个值，另一个值则为50%
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>background-size:;</mark></th>
+                    <td data-th="background-size:;" class="mediaColorG"><span class="css3">CSS3</span> 图像大小</td>
+                </tr>
+                <tr>
+                    <th>auto</th>
+                    <td data-th="auto">默认，显示图像原始大小</td>
+                </tr>
+                <tr>
+                    <th>宽 高</th>
+                    <td data-th="宽 高">如仅指定一个值，另一个值则为auto</td>
+                </tr>
+                <tr>
+                    <th>cover</th>
+                    <td data-th="cover">覆盖整个容器，可能被拉伸或裁切</td>
+                </tr>
+                <tr>
+                    <th>contain</th>
+                    <td data-th="contain">使图像在容器中完整可见</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>background-repeat:;</mark></th>
+                    <td data-th="background-repeat:;" class="mediaColorG"><span class="css1">CSS1</span> 图像重复方式</td>
+                </tr>
+                <tr>
+                    <th>repeat</th>
+                    <td data-th="repeat">
+                        默认，垂直和水平重复(无间隙，被裁切)
+                        <br>
+                        如结束的图像超出容器，将会被裁切
+                    </td>
+                </tr>
+                <tr>
+                    <th>repeat-x</th>
+                    <td data-th="repeat-x">仅水平重复(无间隙，被裁切)</td>
+                </tr>
+                <tr>
+                    <th>repeat-y</th>
+                    <td data-th="repeat-y">仅垂直重复(无间隙，被裁切)</td>
+                </tr>
+                <tr>
+                    <th>no-repeat</th>
+                    <td data-th="no-repeat">不重复</td>
+                </tr>
+                <tr>
+                    <th>space</th>
+                    <td data-th="space">
+                        垂直和水平重复(有间隙，完整图像)
+                        <br>
+                        图像不会被裁切，图像间添加空格实现均匀分布
+                    </td>
+                </tr>
+                <tr>
+                    <th>round</th>
+                    <td data-th="round">
+                        垂直和水平重复(无间隙，完整图像)
+                        <br>
+                        图像被压缩或拉伸以填充空间
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>background-origin:;</mark></th>
+                    <td data-th="background-origin:;" class="mediaColorG"><span class="css3">CSS3</span> 图像起始位置</td>
+                </tr>
+                <tr>
+                    <th>padding-box</th>
+                    <td data-th="padding-box">默认，从容器内可用空间</td>
+                </tr>
+                <tr>
+                    <th>border-box</th>
+                    <td data-th="border-box">从边框</td>
+                </tr>
+                <tr>
+                    <th>content-box</th>
+                    <td data-th="content-box">从内容</td>
+                </tr>
+            </table>
+            <br>
+            <p>如果background-attachment:fixed;，则此属性无效</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>background-clip:;</mark></th>
+                    <td data-th="background-clip:;" class="mediaColorG"><span class="css3">CSS3</span> 背景颜色绘制区域</td>
+                </tr>
+                <tr>
+                    <th>border-box</th>
+                    <td data-th="border-box">默认，从边框</td>
+                </tr>
+                <tr>
+                    <th>padding-box</th>
+                    <td data-th="padding-box">从容器内可用空间</td>
+                </tr>
+                <tr>
+                    <th>content-box</th>
+                    <td data-th="content-box">从内容</td>
+                </tr>
+                <tr>
+                    <th>text</th>
+                    <td data-th="text">
+                        在文本上绘制
+                        <br>
+                        <span class="colorR">这是一个实验性的API</span>
+                        <br>
+                        <span class="browser chrome">Chrome</span> -webkit-background-clip:text;
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>background-attachment:;</mark></th>
+                    <td data-th="background-attachment:;" class="mediaColorG"><span class="css1">CSS1</span> 图像固定在容器</td>
+                </tr>
+                <tr>
+                    <th>scroll</th>
+                    <td data-th="scroll">默认，页面滚动时图像随之滚动渐隐</td>
+                </tr>
+                <tr>
+                    <th>fixed</th>
+                    <td data-th="fixed">图像固定在容器</td>
+                </tr>
+                <tr id="overflowPst">
+                    <th>local</th>
+                    <td data-th="local">元素滚动时图像随之滚动渐隐</td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section>
+            <br>
+            <br>
+            <h2>Overflow</h2>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>overflow:;</mark></th>
+                    <td data-th="overflow:;" class="mediaColorG"><span class="css2">CSS2</span> 溢出文本显示方式</td>
+                </tr>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight">overflow-x:;</th>
+                    <td data-th="overflow-x:;" class="mediaColorG"><span class="css3">CSS3</span> 溢出文本横向显示方式</td>
+                </tr>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight">overflow-y:;</th>
+                    <td data-th="overflow-y:;" class="mediaColorG"><span class="css3">CSS3</span> 溢出文本纵向显示方式</td>
+                </tr>
+                <tr>
+                    <th>visible</th>
+                    <td data-th="visible">默认，文本溢出</td>
+                </tr>
+                <tr>
+                    <th>hidden</th>
+                    <td data-th="hidden">溢出内容不可见</td>
+                </tr>
+                <tr>
+                    <th>scroll</th>
+                    <td data-th="scroll">添加滚动条</td>
+                </tr>
+                <tr>
+                    <th>auto</th>
+                    <td data-th="auto">文本溢出时自动显示滚动条</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                <span class="boldFontWeight">中文默认向下溢出</span>
+                <br>
+                使其横向溢出，需设置强制不换行，white-space:nowrap;
+                <br>
+                <span class="boldFontWeight">英文默认向右溢出</span>
+                <br>
+                使其纵向溢出，设置强制英文单词断行，word-break:break-all;
+                <br>
+                <br id="borderPst">
+                页面宽度需设置100%或最大宽度100%
+                <br>
+                main{width:100% | max-width:100%;}
+            </p>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section>
+            <br>
+            <br>
+            <h2>Border</h2>
+            <br>
+            border:宽度 样式 颜色;
+            <br>
+            默认外边框，<span class="css3">CSS3</span> 内边框box-sizing:border-box;
+            <br>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-width:;</mark></th>
+                    <td data-th="border-width:;" class="mediaColorG"><span class="css1">CSS1</span> 边框宽度</td>
+                </tr>
+                <tr>
+                    <th>0px 0px 0px 0px</th>
+                    <td data-th="0px 0px 0px 0px">上 右 下 左</td>
+                </tr>
+                <tr>
+                    <th>0px 0px 0px</th>
+                    <td data-th="0px 0px 0px">上 左右 下</td>
+                </tr>
+                <tr>
+                    <th>0px 0px</th>
+                    <td data-th="0px 0px">上下 左右</td>
+                </tr>
+                <tr>
+                    <th>medium</th>
+                    <td data-th="medium">
+                        默认，中等边框
+                        <br>
+                        =3px
+                    </td>
+                </tr>
+                <tr>
+                    <th>thin</th>
+                    <td data-th="thin">
+                        细边框
+                        <br>
+                        =1px
+                    </td>
+                </tr>
+                <tr>
+                    <th>thick</th>
+                    <td data-th="thick">
+                        粗边框
+                        <br>
+                        =5px
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-style:;</mark></th>
+                    <td data-th="border-style:;" class="mediaColorG"><span class="css1">CSS1</span> 边框样式</td>
+                </tr>
+                <tr>
+                    <th>none</th>
+                    <td data-th="none">默认，无边框</td>
+                </tr>
+                <tr>
+                    <th>hidden</th>
+                    <td data-th="hidden">隐藏边框，<span class="bgY">用于解决边框冲突</span></td>
+                </tr>
+                <tr>
+                    <th>solid</th>
+                    <td data-th="solid">实线</td>
+                </tr>
+                <tr>
+                    <th>dashed</th>
+                    <td data-th="dashed">虚线</td>
+                </tr>
+                <tr>
+                    <th>dotted</th>
+                    <td data-th="dotted">点状线</td>
+                </tr>
+                <tr>
+                    <th>double</th>
+                    <td data-th="double">双实线</td>
+                </tr>
+                <tr>
+                    <th>groove</th>
+                    <td data-th="groove">
+                        3D凹槽
+                        <div class="bdDemonstration bdDemonstration-groove">&emsp;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>ridge</th>
+                    <td data-th="ridge">
+                        3D脊状
+                        <div class="bdDemonstration bdDemonstration-ridge">&emsp;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>inset</th>
+                    <td data-th="inset">
+                        3D内凹
+                        <div class="bdDemonstration bdDemonstration-inset">&emsp;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>outset</th>
+                    <td data-th="outset">
+                        3D外凸
+                        <div class="bdDemonstration bdDemonstration-outset">&emsp;</div>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-color:;</mark></th>
+                    <td data-th="border-color:;" class="mediaColorG"><span class="css1">CSS1</span> 边框颜色</td>
+                </tr>
+                <tr>
+                    <th>transparent</th>
+                    <td data-th="transparent">透明</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-radius:;</mark></th>
+                    <td data-th="border-radius:;" class="mediaColorG"><span class="css3">CSS3</span> 圆角边框半径</td>
+                </tr>
+                <tr>
+                    <th>0px 0px 0px 0px</th>
+                    <td data-th="0px 0px 0px 0px">左上 右上 右下 左下</td>
+                </tr>
+                <tr>
+                    <th>0px 0px 0px</th>
+                    <td data-th="0px 0px 0px">左上 右上左下 右下</td>
+                </tr>
+                <tr>
+                    <th>0px 0px</th>
+                    <td data-th="0px 0px">左上右下 右上左下</td>
+                </tr>
+                <tr>
+                    <th>0px 0px 0px / 0px 0px</th>
+                    <td data-th="0px 0px 0px / 0px 0px">
+                        异形角
+                        <br>
+                        为一个角指定两个值
+                    </td>
+                </tr>
+                <tr>
+                    <th>50%</th>
+                    <td data-th="50%">圆形</td>
+                </tr>
+            </table>
+            <br>
+            <!-- border-image -->
+            <p>border-image:图像 裁剪 重复; 图像边框</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-image-source:;</mark></th>
+                    <td data-th="border-image-source:;" class="mediaColorG"><span class="css3">CSS3</span> 图像</td>
+                </tr>
+                <tr>
+                    <th>url()</th>
+                    <td data-th="url()">图像路径</td>
+                </tr>
+                <tr>
+                    <th>none</th>
+                    <td data-th="none">不使用图像</td>
+                </tr>
+            </table>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    border:30px solid transparent;
+                    <br>
+                    border-image-source:url(../assets/border-image.png);
+                </div>
+            </div>
+            <div class="bdImgdemonstration bdImgdemonstration-source"></div>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-image-slice:;</mark></th>
+                    <td data-th="border-image-slice:;" class="mediaColorG"><span class="css3">CSS3</span> 裁切，设置边框图片边的宽度 | 高度</td>
+                </tr>
+                <tr>
+                    <th>0 0 0 0</th>
+                    <td data-th="0 0 0 0">上 右 下 左</td>
+                </tr>
+                <tr>
+                    <th>0 0 0</th>
+                    <td data-th="0 0 0">上 右左 下</td>
+                </tr>
+                <tr>
+                    <th>0 0</th>
+                    <td data-th="0 0">上下 右左</td>
+                </tr>
+                <tr>
+                    <th>0 fill</th>
+                    <td data-th="0 fill">显示图像中间部分</td>
+                </tr>
+            </table>
+            <br>
+            <p>数字默认单位px</p>
+            <br>
+            <p>图像会被分成9个部分，4个角，4个边和中间</p>
+            <br>
+            <table class="demonstration-slice9-table">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="bdLeft"></td>
+                    <td class="bdLeft"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="bgY">corner</td>
+                    <td class="bdLeft bgY">edge</td>
+                    <td class="bdLeft bgY">corner</td>
+                    <td></td>
+                </tr>
+                <tr class="bdTop">
+                    <td></td>
+                    <td class="bgY">edge</td>
+                    <td class="bdLeft bgY">middle</td>
+                    <td class="bdLeft bgY">edge</td>
+                    <td></td>
+                </tr>
+                <tr class="bdTop">
+                    <td></td>
+                    <td class="bgY">corner</td>
+                    <td class="bdLeft bgY">edge</td>
+                    <td class="bdLeft bgY">corner</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="bdLeft"></td>
+                    <td class="bdLeft"></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                repeat时角不被影响
+                <br>
+                边将被拉伸或平铺
+                <br>
+                中间默认隐藏
+            </p>
+            <table class="demonstration-slice9-table">
+                <tr>
+                    <td class="bgY">fixed</td>
+                    <td class="bdLeft">Top<br>水平平铺</td>
+                    <td class="bdLeft bgY">fixed</td>
+                </tr>
+                <tr class="bdTop">
+                    <td>Left<br>垂直平铺</td>
+                    <td class="bdLeft">hide</td>
+                    <td class="bdLeft">Right<br>垂直平铺</td>
+                </tr>
+                <tr class="bdTop">
+                    <td class="bgY">fixed</td>
+                    <td class="bdLeft">Bottom<br>水平平铺</td>
+                    <td class="bdLeft bgY">fixed</td>
+                </tr>
+            </table>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    border:30px solid transparent;
+                    <br>
+                    border-image-source:url(../assets/border-image.png);
+                    <br>
+                    border-image-slice:30;
+                </div>
+            </div>
+            <div class="bdImgdemonstration bdImgdemonstration-slice"></div>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-image-repeat:;</mark></th>
+                    <td data-th="border-image-repeat:;" class="mediaColorG"><span class="css3">CSS3</span> 重复图像</td>
+                </tr>
+                <tr>
+                    <th>stretch</th>
+                    <td data-th="stretch">默认，拉伸</td>
+                </tr>
+                <tr>
+                    <th>repeat</th>
+                    <td data-th="repeat">
+                        平铺
+                        <br>
+                        两端多余图像被裁剪
+                    </td>
+                </tr>
+                <tr>
+                    <th>round</th>
+                    <td data-th="round">
+                        平铺
+                        <br>
+                        图像缩放适应区域
+                        <br>
+                        图像不被裁剪
+                    </td>
+                </tr>
+                <tr>
+                    <th>space</th>
+                    <td data-th="space">
+                        平铺
+                        <br>
+                        多余图像被均匀裁剪
+                    </td>
+                </tr>
+                <tr>
+                    <th>round stretch</th>
+                    <td data-th="round stretch">水平方向 垂直方向</td>
+                </tr>
+            </table>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    border:30px solid transparent;
+                    <br>
+                    border-image-source:url(../assets/border-image.png);
+                    <br>
+                    border-image-slice:30;
+                    <br>
+                    border-image-repeat:round stretch;
+                </div>
+            </div>
+            <div class="bdImgdemonstration bdImgdemonstration-repeat"></div>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-image-outset:;</mark></th>
+                    <td data-th="border-image-outset:;" class="mediaColorG"><span class="css3">CSS3</span> 图像超出边框距离</td>
+                </tr>
+                <tr>
+                    <th>0 0 0 0</th>
+                    <td data-th="0 0 0 0">上 右 下 左</td>
+                </tr>
+            </table>
+            <br>
+            <p>数字默认表示border-width的倍数</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>border-image-width:;</mark></th>
+                    <td data-th="border-image-width:;" class="mediaColorG"><span class="css3">CSS3</span> 图片宽度 | 高度</td>
+                </tr>
+                <tr>
+                    <th>0 0 0 0</th>
+                    <td data-th="0 0 0 0">上 右 下 左</td>
+                </tr>
+                <tr>
+                    <th>auto</th>
+                    <td data-th="auto">图像原始宽度或高度</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

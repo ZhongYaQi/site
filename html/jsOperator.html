@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/jsOperator.css">
+</head>
+<body>
+    <header id="unaryPosition">
+        <label for="menuBtn" class="menuBtn-label">
+            <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="../html/js.html">ES</a>
+                <a href="../html/js6.html">ES6</a>
+                <a href="../html/jsDataType.html">Data Type</a>
+                <a href="../html/jsObject.html">Object</a>
+                <a href="../html/jsOperator.html" class="current-a">Operator</a>
+                <a href="../html/jsFlowControlStatement.html">Flow Control Statement</a>
+            </div>
+        </nav>
+        <div class="inPageNav">
+            <div class="inPageNavContainer">
+                <a href="#unaryPosition">一元</a>
+                <a href="#binaryPosition">二元</a>
+                <a href="#conditionalPosition">条件</a>
+                <a href="#logicalPosition">逻辑</a>
+                <a href="#assignmentPosition">赋值</a>
+                <a href="#relationalPosition">关系</a>
+                <a href="#equalityPosition">相等</a>
+                <a href="#priorityPosition">优先级</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- 一元运算符 -->
+        <section>
+            <h2>一元运算符</h2>
+            <p>只需要一个可操作数</p>
+            <br>
+            <table>
+                <tr>
+                    <th>typeof</th>
+                    <td>检查变量类型</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <th>+</th>
+                    <td>正号</td>
+                </tr>
+                <tr>
+                    <th>-</th>
+                    <td>负号</td>
+                </tr>
+            </table>
+            <br>
+            <p>非数字类型的值会被转换为数字后再运算</p>
+            <br>
+            <p class="boundaryGray">—</p>
+            <br>
+            <p class="boldFontWeight">自增1 | 自减1</p>
+            <br>
+            <table>
+                <tr>
+                    <th><span class="colorBlack">a</span>++</th>
+                    <td>
+                        后置递增
+                        <br>
+                        原变量的值
+                    </td>
+                </tr>
+                <tr>
+                    <th>++<span class="colorBlack">a</span></th>
+                    <td>
+                        前置递增
+                        <br>
+                        自增后的值
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorBlack">a</span>--</th>
+                    <td>
+                        后置递减
+                        <br>
+                        原变量的值
+                    </td>
+                </tr>
+                <tr>
+                    <th>--<span class="colorBlack">a</span></th>
+                    <td>
+                        前置递减
+                        <br>
+                        自减后的值
+                    </td>
+                </tr>
+            </table>
+            <br id="binaryPosition">
+            <p>调用后原变量的值立刻自增或自减</p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- 算数运算符 | 二元运算符 -->
+        <section>
+            <br>
+            <br>
+            <h2>算数运算符 | 二元运算符</h2>
+            <p>
+                对两个值进行运算，并返回结果到指定变量
+                <br>
+                不会直接影响原变量
+                <br>
+                <mark>非数字类型的值会被转换为数字后再运算</mark>
+                <br>
+                运算类型包含NaN=<span class="colorBG">NaN</span>
+            </p>
+            <br>
+            <table>
+                <tr>
+                    <th>+</th>
+                    <td>加法</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="colorR">*</span>任何值和字符串的加法运算，都会被转换为字符串，进行拼串处理</p>
+            <br>
+            <p class="boundaryGray">—</p>
+            <br>
+            <table>
+                <tr>
+                    <th>-</th>
+                    <td>减法</td>
+                </tr>
+                <tr>
+                    <th>*</th>
+                    <td>乘法</td>
+                </tr>
+                <tr>
+                    <th>/</th>
+                    <td>除法</td>
+                </tr>
+                <tr>
+                    <th>%</th>
+                    <td id="conditionalPosition">取模(取余数)</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- 条件运算符 | 三元运算符 -->
+        <section>
+            <br>
+            <br>
+            <h2>条件运算符 | 三元运算符</h2>
+            <table>
+                <tr>
+                    <th>?:</th>
+                    <td>条件表达式?语句1:语句2;</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                对条件表达式进行求值
+                <br>
+                值为true，执行语句1，返回执行结果到指定变量
+                <br>
+                值为false，执行语句2，返回执行结果到指定变量
+                <br>
+                <br id="logicalPosition">
+                非布尔值的结果会被转换为布尔值再执行
+            </p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- 逻辑运算符 -->
+        <section>
+            <br>
+            <br>
+            <h2>逻辑运算符</h2>
+            <p>
+                对布尔值进行运算，并返回结果到指定变量
+                <br>
+                非布尔值会被转换为布尔值再运算
+            </p>
+            <br>
+            <table>
+                <tr>
+                    <th>!</th>
+                    <td>非</td>
+                </tr>
+            </table>
+            <br>
+            <p>对一个值取反</p>
+            <br>
+            <p class="boundaryGray">—</p>
+            <br>
+            <p>
+                <span class="boldFontWeight">&& ||</span>
+                <br>
+                对两个值进行运算
+                <br>
+                返回原数据类型的值到指定变量
+            </p>
+            <br>
+            <table>
+                <tr>
+                    <th>&&</th>
+                    <td>与</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                两个true返回true
+                <br>
+                有一个false返回false
+            </p>
+            <br>
+            <p>
+                <span class="boldFontWeight">JS中，属于短路的与</span>
+                <br>
+                第一个值为true，会检查第二个值
+                <br>
+                第一个值为false，不会检查第二个值
+            </p>
+            <br>
+            <p class="boundaryGray">—</p>
+            <br>
+            <table>
+                <tr>
+                    <th>||</th>
+                    <td>或</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                两个false返回false
+                <br>
+                有一个true返回true
+            </p>
+            <br>
+            <p>
+                <span class="boldFontWeight">JS中，属于短路的或</span>
+                <br>
+                第一个值为true，不会检查第二个值
+                <br id="assignmentPosition">
+                第一个值为false，会检查第二个值
+            </p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- 赋值运算符 -->
+        <section>
+            <br>
+            <br>
+            <h2>赋值运算符</h2>
+            <br>
+            <table>
+                <tr>
+                    <th>=</th>
+                    <td>
+                        等于
+                        <br>
+                        赋值语句以分号结束
+                    </td>
+                </tr>
+                <tr>
+                    <th>+=</th>
+                    <td>加等于</td>
+                </tr>
+                <tr>
+                    <th>-=</th>
+                    <td>减等于</td>
+                </tr>
+                <tr>
+                    <th>*=</th>
+                    <td>乘等于</td>
+                </tr>
+                <tr>
+                    <th>/=</th>
+                    <td>除等于</td>
+                </tr>
+                <tr>
+                    <th>%=</th>
+                    <td id="relationalPosition">模等于</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- 关系运算符 -->
+        <section>
+            <br>
+            <br>
+            <h2>关系运算符</h2>
+            <p>
+                比较两个值间的大小关系
+                <br>
+                成立返回true，不成立返回flase
+                <br>
+                <br>
+                非数字类型的值会被转换为数字再比较
+                <br>
+                运算类型包含NaN=<span class="colorBG">false</span>
+                <br>
+                <br>
+                两个字符串比较，不会被转换为数字，会比较其单个字符的Unicode编码
+                <br>
+                比较字符编码时，相对位置的字符对位比较，如果两位一样，则比较下一位
+                <br>
+                <span class="colorR">*</span>在比较两个字符串型的数字时需要转型
+            </p>
+            <br>
+            <table>
+                <tr>
+                    <th>&gt;</th>
+                    <td>大于</td>
+                </tr>
+                <tr>
+                    <th>&gt;=</th>
+                    <td>大于等于</td>
+                </tr>
+                <tr>
+                    <th>&lt;</th>
+                    <td>小于</td>
+                </tr>
+                <tr>
+                    <th>&lt;=</th>
+                    <td id="equalityPosition">小于等于</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- 关系运算符 | 相等运算符 -->
+        <section>
+            <br>
+            <br>
+            <h2>关系运算符 | 相等运算符</h2>
+            <p>返回布尔值</p>
+            <br>
+            <span class="boundaryGray">—</span>
+            <br>
+            <br>
+            <p>
+                类型不同的值会自动进行类型转换再比较(大部分情况均转换为数字)
+                <br>
+                <br>
+                特殊情况下不会被转换为数字
+                <br>
+                ①<span class="colorY">null</span><span class="operator">!=</span><span class="colorY">0</span>
+                <br>
+                console.<span class="colorB">log</span>(<span class="colorY">null</span><span class="operator">==</span><span class="colorY">0</span>); //false
+                <br>
+                ②<span class="colorY">undefined</span><span class="operator">==</span><span class="colorY">null</span>
+                <br>
+                undefined衍生自null
+                <br>
+                console.<span class="colorB">log</span>(<span class="colorY">undefined</span><span class="operator">==</span><span class="colorY">null</span>); //true
+                <br>
+                ③<span class="colorY">NaN</span><span class="operator">!=</span><span class="colorY">NaN</span>
+                <br>
+                NaN不和任何值相等
+                <br>
+                (因此无法通过关系运算符去判断变量是否为NaN)
+                <br>
+                可以通过isNaN()函数判断
+                <br>
+                <span class="var">var</span> a=<span class="colorY">NaN</span>;
+                <br>
+                console.<span class="colorB">log</span>(<span class="colorBG">isNaN</span>(b)); //true
+            </p>
+            <br>
+            <table>
+                <tr>
+                    <th>==</th>
+                    <td>相等</td>
+                </tr>
+                <tr>
+                    <th>!=</th>
+                    <td>不相等</td>
+                </tr>
+            </table>
+            <br>
+            <span class="boundaryGray">—</span>
+            <br>
+            <br>
+            比较时不做自动类型转换
+            <br>
+            <br>
+            <table>
+                <tr>
+                    <th>===</th>
+                    <td>全等</td>
+                </tr>
+                <tr>
+                    <th>!==</th>
+                    <td id="priorityPosition">不全等</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- 优先级 -->
+        <section>
+            <br>
+            <br>
+            <h2>优先级</h2>
+            <p>
+                .&emsp;[]&emsp;new
+                <br>
+                ()
+                <br>
+                ++&emsp;--
+                <br>
+                !&emsp;~&emsp;+(单目)&emsp;-(单目)&emsp;typeof&emsp;void&emsp;delete
+                <br>
+                %&emsp;*&emsp;/&emsp;
+                <br>
+                +(双目)&emsp;-(双目)
+                <br>
+                <<&emsp;>>&emsp;>>>
+                <br>
+                <&emsp;<=&emsp;>&emsp;>=
+                <br>
+                ==&emsp;!==&emsp;===
+                <br>
+                &
+                <br>
+                ^
+                <br>
+                |
+                <br>
+                &&
+                <br>
+                ||
+                <br>
+                ?:
+                <br>
+                =&emsp;+=&emsp;-=&emsp;*=&emsp;/=&emsp;%=&emsp;<<=&emsp;>>=&emsp;>>>=&emsp;&=&emsp;^=&emsp;|=
+                <br>
+                ,
+            </p>
+        </section>
+    </main>
+</body>
+</html>

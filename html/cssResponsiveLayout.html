@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/cssResponsiveLayout.css">
+</head>
+<body>
+    <header id="mediaQueryPst">
+        <label for="menuBtn" class="menuBtn-label">
+            <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="css.html">CSS</a>
+                <a href="css3.html">CSS3</a>
+                <a href="cssResponsiveLayout.html" class="current-a">Responsive Layout</a>
+                <a href="cssSelector.html">Selector</a>
+                <a href="cssUnits.html">Units</a>
+            </div>
+        </nav>
+        <div class="inPageNav">
+            <div class="inPageNavContainer">
+                <a href="#mediaQueryPst">Media Query</a>
+                <a href="#gridPst">Grid</a>
+                <a href="#flexPst">Flex</a>
+                <a href="#floatPst">Float</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- media Query -->
+        <section>
+            <h2>Media Query 媒体查询</h2>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    <br>
+                    <div class="colorGray">设备宽度 初始缩放一倍</div>
+                </div>
+            </div>
+            <br>
+            <h4><mark>media="()"</mark> HTML文档中使用</h4>
+            <br>
+            <table>
+                <tr>
+                    <th>max-width:</th>
+                    <td data-th="max-width:">最大宽度</td>
+                </tr>
+                <tr>
+                    <th>min-width:</th>
+                    <td data-th="min-width:">最小宽度</td>
+                </tr>
+            </table>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;link media="(max-width:600px)"  rel="stylesheet" href=""&gt;
+                    <br>
+                    <div class="colorGray">当视窗宽度不大于600px，加载该规则</div>
+                </div>
+            </div>
+            <br>
+            <table>
+                <tr>
+                    <th>orientation:landscape</th>
+                    <td data-th="orientation:landscape">横向显示</td>
+                </tr>
+                <tr>
+                    <th>orientation:portrait</th>
+                    <td data-th="orientation:portrait">纵向显示</td>
+                </tr>
+            </table>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;link media="(orientation:landscape)and(min-width:600px)"  rel="stylesheet" href=""&gt;
+                    <br>
+                    <div class="colorGray">当设备横向显示且视窗宽度不小于600px，加载该规则</div>
+                </div>
+            </div>
+            <br>
+            <h4><mark>@media()</mark> CSS文档中使用</h4>
+            <br>
+            <table>
+                <tr>
+                    <th>max-width:</th>
+                    <td data-th="max-width:">最大宽度</td>
+                </tr>
+                <tr>
+                    <th>min-width:</th>
+                    <td data-th="min-width:">最小宽度</td>
+                </tr>
+            </table>
+            <div class="pre">
+                <div class="preContainer">
+                    @media(max-width:600px){}
+                    <br id="gridPst">
+                    <div class="colorGray">当视窗宽度=&lt;600px,加载以下规则</div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>Grid 网格</h2>
+            <p>display:grid; <span class="css3">CSS3</span> <span class="tag">容器属性</span></p>
+            <br>
+            <!-- grid-template-columns -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">grid-template-columns:;</mark></th>
+                    <td data-th="grid-template-columns:;" class="mediaColorG"><span class="tag">容器属性</span> 设置栏的数量和宽度</td>
+                </tr>
+                <tr>
+                    <th>1fr 1fr 1fr</th>
+                    <td data-th="1fr 1fr 1fr">
+                        表示容器中有3栏
+                        <br>
+                        fr是一个等分容器空间单位
+                    </td>
+                </tr>
+                <tr>
+                    <th>repeat(3,1fr)</th>
+                    <td data-th="repeat(3,1fr)">等分情况下简写</td>
+                </tr>
+                <tr>
+                    <th>1fr minmax(auto,50%) 1fr</th>
+                    <td data-th="1fr minmax(auto,50%) 1fr">表示中间栏的宽度区间</td>
+                </tr>
+            </table>
+            <br>
+            <!-- grid-template-rows -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">grid-template-rows:;</mark></th>
+                    <td data-th="grid-template-rows:;" class="mediaColorG"><span class="tag">容器属性</span> 设置行的数量和高度</td>
+                </tr>
+                <tr>
+                    <th>repeat(3,100px)</th>
+                    <td data-th="repeat(3,100px)">相同数值情况下简写</td>
+                </tr>
+                <tr>
+                    <th>10px minmax(10px,auto) 10px</th>
+                    <td data-th="10px minmax(10px,auto) 10px">定义中间栏的最大高度为内容高</td>
+                </tr>
+            </table>
+            <br>
+            <!-- grid-gap:; -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">grid-gap:;</mark></th>
+                    <td data-th="grid-gap:;" class="mediaColorG"><span class="tag">容器属性</span> 间隔</td>
+                </tr>
+                <tr>
+                    <th>grid-column-gap:;</th>
+                    <td data-th="grid-column-gap:;">栏之间的间隔</td>
+                </tr>
+                <tr>
+                    <th>grid-row-gap:;</th>
+                    <td data-th="grid-row-gap:;">行之间的间隔</td>
+                </tr>
+            </table>
+            <br>
+            <!-- grid-column:;/grid-row:; -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">grid-column:; grid-row:;</mark></th>
+                    <td data-th="grid-column:; grid-row:;" class="mediaColorG">
+                        <span class="tag">项目属性</span> 定义格的位置或占几格空间
+                        <br>
+                        正斜杠/分隔起始和结束数值
+                        <br>
+                        仅一个值默认占1格，数值表示起始线
+                    </td>
+                </tr>
+                <tr>
+                    <th>grid-column-start:;</th>
+                    <td data-th="grid-column-start:;">栏的起始线</td>
+                </tr>
+                <tr>
+                    <th>grid-column-end:;</th>
+                    <td data-th="grid-column-end:;">栏的结束线</td>
+                </tr>
+                <tr>
+                    <th>grid-row-start:;</th>
+                    <td data-th="grid-row-start:;">行的起始线</td>
+                </tr>
+                <tr>
+                    <th>grid-row-end:;</th>
+                    <td data-th=grid-row-end:;"">行的结束线</td>
+                </tr>
+            </table>
+            <br>
+            <!-- 栏线行线示意图 -->
+            <table class="demonstration-gridline-table">
+                <tr>
+                    <td></td>
+                    <td>栏线1&emsp;</td>
+                    <td>栏线2&emsp;</td>
+                    <td>栏线3&emsp;</td>
+                    <td>栏线4</td>
+                </tr>
+                <tr>
+                    <td>行线1<br>&emsp;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>行线2<br>&emsp;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>行线3<br>&emsp;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>行线4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <!-- grid-template-areas -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">grid-template-areas:;</mark></th>
+                    <td data-th="grid-template-areas:;" class="mediaColorG"><span class="tag">容器属性</span> 定义每行中的网格</td>
+                </tr>
+                <tr>
+                    <th>书写格式</th>
+                    <td data-th="书写格式">"main aside" "footer footer"</td>
+                </tr>
+            </table>
+            <br>
+            <!-- grid-area -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">grid-area:;</mark></th>
+                    <td data-th="grid-area:;" class="mediaColorG"><span class="tag">项目属性</span> 指定被定义的网格</td>
+                </tr>
+                <tr id="flexPst">
+                    <th>与定义命名一致</th>
+                    <td data-th="与定义命名一致"><i>main</i></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- flex -->
+        <section>
+            <br>
+            <br>
+            <h2>Flex 弹性</h2>
+            <p>
+                display:flex; <span class="css3">CSS3</span> <span class="tag">容器属性</span>
+                <br>
+                设置flex布局，其为行内元素的子元素宽高可设
+                <br>
+                容器需设有确切参数的高度，用于实现垂直排列方式
+            </p>
+            <br>
+            <p>flex-flow:主轴方向 单行或多行;</p>
+            <br>
+            <!-- flex-direction -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">flex-direction:;</mark></th>
+                    <td data-th="flex-direction:;" class="mediaColorG">
+                        <span class="tag">容器属性</span> 定义主轴(项目排列方向)
+                        <br>
+                        当主轴为X轴，侧轴为Y轴
+                    </td>
+                </tr>
+                <tr>
+                    <th>row</th>
+                    <td data-th="row">默认，水平显示</td>
+                </tr>
+                <tr>
+                    <th>column</th>
+                    <td data-th="column">垂直显示</td>
+                </tr>
+            </table>
+            <br>
+            <!-- flex-wrap -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">flex-wrap:;</mark></th>
+                    <td data-th="flex-wrap:;" class="mediaColorG"><span class="tag">容器属性</span> 单行或多行</td>
+                </tr>
+                <tr>
+                    <th>nowrap</th>
+                    <td data-th="nowrap">
+                        默认，不换行
+                        <br>
+                        每个项目缩小其宽或高，以适应容器尺寸
+                    </td>
+                </tr>
+                <tr>
+                    <th>wrap</th>
+                    <td data-th="wrap">
+                        换行
+                        <br>
+                        从容器前端顺序排列，每排项目两端空间被平分
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- justify-content -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">justify-content:;</mark></th>
+                    <td data-th="justify-content:;" class="mediaColorG"><span class="tag">容器属性</span> 项目群在主轴上</td>
+                </tr>
+                <tr>
+                    <th>center</th>
+                    <td data-th="center">居中</td>
+                </tr>
+                <tr>
+                    <th>flex-start</th>
+                    <td data-th="flex-start">默认，位于容器前端</td>
+                </tr>
+                <tr>
+                    <th>flex-end</th>
+                    <td data-th="flex-end">位于容器尾端</td>
+                </tr>
+                <tr>
+                    <th>space-between</th>
+                    <td data-th="space-between">每个项目之间平分剩余空间</td>
+                </tr>
+                <tr>
+                    <th>space-around</th>
+                    <td data-th="space-around">平分剩余空间于每个项目的两端边距</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                <span class="boldFontWeight">占位元素解决最后一排居中</span>
+                <br>
+                添加若干个等宽的空项目
+            </p>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;div class="flex"&gt;
+                    <br>
+                    |&emsp;&lt;p&gt;content&lt;/p&gt;
+                    <br>
+                    |&emsp;&lt;p&gt;content&lt;/p&gt;
+                    <br>
+                    |&emsp;<span class="htmlColor">&lt;p&gt;&lt;/p&gt;</span>
+                    <br>
+                    |&emsp;<span class="htmlColor">&lt;p&gt;&lt;/p&gt;</span>
+                    <br>
+                    |&emsp;<span class="htmlColor">&lt;p&gt;&lt;/p&gt;</span>
+                    <br>
+                    &lt;/div&gt;
+                </div>
+            </div>
+            <br>
+            <!-- align-items -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">align-items:;</mark></th>
+                    <td data-th="align-items:;" class="mediaColorG"><span class="tag">容器属性</span> 项目群在侧轴上(单行项目使用)</td>
+                </tr>
+                <tr>
+                    <th>center</th>
+                    <td data-th="center">居中</td>
+                </tr>
+                <tr>
+                    <th>stretch</th>
+                    <td data-th="stretch">
+                        默认，拉伸占据剩余空间
+                        <br>
+                        需未设置项目宽度或高度
+                    </td>
+                </tr>
+                <tr>
+                    <th>flex-start</th>
+                    <td data-th="flex-start">位于容器前端</td>
+                </tr>
+                <tr>
+                    <th>flex-end</th>
+                    <td data-th="flex-end">位于容器尾端</td>
+                </tr>
+            </table>
+            <br>
+            <!-- align-content -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">align-content:;</mark></th>
+                    <td data-th="align-content:;" class="mediaColorG">
+                        <span class="tag">容器属性</span> 项目群在侧轴上(多行项目使用)
+                        <br>
+                        单行无效
+                        <br>
+                        需设wrap
+                        <br>
+                        每排项目间无间隙
+                    </td>
+                </tr>
+                <tr>
+                    <th>stretch</th>
+                    <td data-th="stretch">默认，拉伸占据剩余空间</td>
+                </tr>
+                <tr>
+                    <th>center</th>
+                    <td data-th="center">居中</td>
+                </tr>
+                <tr>
+                    <th>flex-start</th>
+                    <td data-th="flex-start">位于容器前端</td>
+                </tr>
+                <tr>
+                    <th>flex-end</th>
+                    <td data-th="flex-end">位于容器尾端</td>
+                </tr>
+                <tr>
+                    <th>space-between</th>
+                    <td data-th="space-between">两端对齐边缘，每排项目之间平分剩余空间</td>
+                </tr>
+                <tr>
+                    <th>space-around</th>
+                    <td data-th="space-around">平分剩余空间于每排项目的两端边距</td>
+                </tr>
+            </table>
+            <br>
+            <!-- 项目属性 -->
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">flex:;</mark></th>
+                    <td data-th="flex:;" class="mediaColorG"><span class="tag">项目属性</span> 平均分配剩余空间</td>
+                </tr>
+                <tr>
+                    <th>数字</th>
+                    <td data-th="数字">占有的份数</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">align-self:;</mark></th>
+                    <td data-th="align-self:;" class="mediaColorG"><span class="tag">项目属性</span> 单独项目在侧轴上</td>
+                </tr>
+                <tr>
+                    <th>auto</th>
+                    <td data-th="auto">默认</td>
+                </tr>
+                <tr>
+                    <th>stretch</th>
+                    <td data-th="stretch">
+                        拉伸占据剩余空间
+                        <br>
+                        需未设置项目宽度或高度
+                    </td>
+                </tr>
+                <tr>
+                    <th>center</th>
+                    <td data-th="center">相对于原位在轴上居中</td>
+                </tr>
+                <tr>
+                    <th>flex-start</th>
+                    <td data-th="flex-start">位于轴前端(原位置)</td>
+                </tr>
+                <tr>
+                    <th>flex-end</th>
+                    <td data-th="flex-end">位于轴尾端</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">order:;</mark></th>
+                    <td data-th="order:;" class="mediaColorG"><span class="tag">项目属性</span> 项目排列顺序</td>
+                </tr>
+                <tr id="floatPst">
+                    <th>数字</th>
+                    <td data-th="数字">
+                        默认值0
+                        <br>
+                        数值越小越靠前
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- float -->
+        <section>
+            <br>
+            <br>
+            <h2>Float 浮动</h2>
+            <table>
+                <tr class="mediaClearBd">
+                    <th><mark class="boldFontWeight">float:;</mark></th>
+                    <td data-th="float:;" class="mediaColorG"><span class="tag">css1</span> 脱离文档流</td>
+                </tr>
+                <tr id="floatPst">
+                    <th>left</th>
+                    <td data-th="left">向左</td>
+                </tr>
+                <tr id="floatPst">
+                    <th>right</th>
+                    <td data-th="right">向右</td>
+                </tr>
+                <tr id="floatPst">
+                    <th>none</th>
+                    <td data-th="none">默认，不浮动</td>
+                </tr>
+            </table>
+            <br>
+            <p>如果浮动值不是none，display被视为block</p>
+            <br>
+            <p class="boldFontWeight">解决浮动的高度塌陷</p>
+            <p>当容器高度未设置或自适应时，高度则不会被计算，显示为背景高度未覆盖除标题外的子元素</p>
+            <br>
+            <p>
+                ①添加子元素后清除浮动
+                <br>
+                在容器中末端创建空的块级元素，清除其浮动产生的布局，当该元素为常规流，可强制使父元素高度扩展到容器尾端
+            </p>
+            <div class="pre">
+                <div class="preContainer">
+                    &lt;div&gt;
+                    <br>
+                    &emsp;&lt;span&gt;浮动的子元素&lt;/span&gt;
+                    <br>
+                    &emsp;&lt;span&gt;浮动的子元素&lt;/span&gt;
+                    <br>
+                    <span class="htmlColor">&emsp;&lt;p&gt;&lt;/p&gt;</span>
+                    <br>
+                    &lt;/div&gt;
+                </div>
+            </div>
+            <br>
+            <div class="pre">
+                <div class="preContainer">
+                    <span class="htmlColor">p</span>{clear:both;}
+                </div>
+            </div>
+            <br>
+            <p>
+                ②创建BFC
+                <br>
+                为父元素添加overflow:hidden/auto;定义溢出文本的显示方式，此时计算浮动流的高度
+            </p>
+            <div class="pre">
+                <div class="preContainer">
+                    父元素{overflow:auto;}
+                </div>
+            </div>
+            <br>
+            <p>
+                ③添加伪元素后清除浮动
+                <br>
+                在父元素末端添加虚拟子元素
+            </p>
+            <div class="pre">
+                <div class="preContainer">
+                    父元素{
+                    <br>
+                    &emsp;content:'';
+                    <br>
+                    &emsp;display:block;
+                    <br>
+                    &emsp;clear:both;
+                    <br>
+                    }
+                </div>
+            </div>
+        </section>
+    </main>
+</body>

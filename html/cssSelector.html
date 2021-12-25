@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/cssSelector.css">
+</head>
+<body>
+    <header id="mediaQueryPst">
+        <label for="menuBtn" class="menuBtn-label">
+            <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="css.html">CSS</a>
+                <a href="css3.html">CSS3</a>
+                <a href="cssResponsiveLayout.html">Responsive Layout</a>
+                <a href="cssSelector.html" class="current-a">Selector</a>
+                <a href="cssUnits.html">Units</a>
+            </div>
+        </nav>
+        <div class="inPageNav"></div>
+    </header>
+    <main>
+        <section>
+            <p><span class="boldFontWeight">元素选择器</span> <span class="tag">css1</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">元素{}</th>
+                    <td data-th="元素{}">该元素</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">类选择器</span> <span class="tag">css1</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">.类名{}</th>
+                    <td data-th=".类名{}">该class命名的元素</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">id选择器</span> <span class="tag">css1</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">#id名{}</th>
+                    <td data-th="#id名{}">该id命名的元素</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">通配选择器</span> <span class="tag">css2</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">*{}</th>
+                    <td data-th="*{}">所有元素</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">并集选择器/选择器分组</span> <span class="tag">css1</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">选择器1,选择器N{}</th>
+                    <td data-th="选择器1,选择器N{}">
+                        多个元素
+                        <br>
+                        选择器可以是任何形式的
+                        <br>
+                        用逗号间隔
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">交集/复合选择器</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">选择器1选择器N{}</th>
+                    <td data-th="选择器1选择器N{}">
+                        满足多个条件的元素
+                        <br>
+                        选择器之间不能有空格
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">包含选择器</span> <span class="tag">css1</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">双亲元素 孩子元素{}</th>
+                    <td data-th="双亲元素 孩子元素{}">
+                        后代元素
+                        <br>
+                        可以选择包含在内的任意一级元素
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">
+                孩子选择器</span> <span class="tag">css2</span> <span class="tag">孩子选择器</span>
+                <br>
+                Child Selectors
+            </p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">双亲元素 > 孩子元素{}</th>
+                    <td data-th="双亲元素 > 孩子元素{}">
+                        只能选择下一级元素
+                        <br>
+                        大于号左右两侧都写有空格
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">first-child选择器</span> <span class="tag">css2</span> <span class="tag">孩子选择器</span> <span class="tag">伪元素</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">孩子元素:first-child{}</th>
+                    <td data-th="孩子元素:first-child{}">孩子元素满足在容器元素中位于首位</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">last-child选择器</span> <span class="css3">css3</span> <span class="tag">孩子选择器</span> <span class="tag">伪元素</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">孩子元素:last-child{}</th>
+                    <td data-th="孩子元素:last-child{}">孩子元素满足在容器元素中位于尾位</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">nth-child()选择器</span> <span class="css3">css3</span> <span class="tag">孩子选择器</span> <span class="tag">伪元素</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">孩子元素:nth-child(2){}</th>
+                    <td data-th="孩子元素:nth-child(2){}">容器中第2个孩子元素</td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">孩子元素:nth-child(2n){}</th>
+                    <td data-th="孩子元素:nth-child(2n){}">
+                        文档中排序为偶数的孩子元素
+                        <br>
+                        2n也可写作even
+                    </td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">孩子元素:nth-child(2n+1){}</th>
+                    <td data-th="孩子元素:nth-child(2n+1){}">
+                        文档中排序为奇数的孩子元素
+                        <br>
+                        2n+1也可写作odd
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">first-of-type选择器</span> <span class="css3">css3</span> <span class="tag">孩子选择器</span> <span class="tag">伪元素</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">孩子元素:first-of-type{}</th>
+                    <td data-th="孩子元素:first-of-type{}">容器元素中第一个孩子元素</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">last-of-type选择器</span> <span class="css3">css3</span> <span class="tag">孩子选择器</span> <span class="tag">伪元素</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">孩子元素:last-of-type{}</th>
+                    <td data-th="孩子元素:last-of-type{}">容器元素中最后一个孩子元素</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">nth-of-type()选择器</span> <span class="css3">css3</span> <span class="tag">孩子选择器</span> <span class="tag">伪元素</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">孩子元素:nth-of-type(2){}</th>
+                    <td data-th="孩子元素:nth-of-type(2){}">容器元素中第2个孩子元素</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">属性选择器</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">[属性]{}</th>
+                    <td data-th="[属性]{}"><span class="tag">css2</span> 带有该属性的元素</td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">[属性="值"]{}</th>
+                    <td data-th="[属性=&quot;值&quot;]{}"><span class="tag">css2</span> 带有该名值对的元素</td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">[属性^="值的开头"]{}</th>
+                    <td data-th="[属性^=&quot;值的开头&quot;]{}"><span class="css3">css3</span> 元素属性值为指定值的首个元素</td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">[属性|="值的开头"]{}</th>
+                    <td data-th="[属性|=&quot;值的开头&quot;]{}">
+                        <span class="tag">css2</span> 元素属性值为指定值的开头元素
+                        <br>
+                        值的开头元素必须是独立的单词或由连字符连接
+                    </td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">[属性$="值的结尾"]{}</th>
+                    <td data-th="[属性$=&quot;值的结尾&quot;]{}"><span class="css3">css3</span> 元素属性值为指定值的最后一个元素</td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">[属性*="值的包含内容"]{}</th>
+                    <td data-th="[属性*=&quot;值的包含内容&quot;]{}"><span class="css3">css3</span> 元素属性值为指定值内的包含元素</td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">[属性~="值的包含内容"]{}</th>
+                    <td data-th="[属性~=&quot;值的包含内容&quot;]{}">
+                        <span class="tag">css2</span> 元素属性值为指定值的内容
+                        <br>
+                        值的内容必须是独立的单词
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">
+                同胞选择器</span> <span class="tag">css2</span>
+                <br>
+                Sibling Selectors
+            </p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">同胞元素+后一个同胞元素{}</th>
+                    <td data-th="同胞元素+后一个同胞元素{}">相邻的后一个同胞元素</td>
+                </tr>
+                <tr>
+                    <th class="clearFontWeight">同胞元素~后所有同胞元素{}</th>
+                    <td data-th="同胞元素~后所有同胞元素{}">后所有的同胞元素</td>
+                </tr>
+            </table>
+            <br>
+            <p><span class="boldFontWeight">否定伪类选择器</span> <span class="css3">css3</span></p>
+            <br>
+            <table>
+                <tr>
+                    <th class="clearFontWeight">:not(指定元素){}</th>
+                    <td data-th=":not(指定元素){}">从已选择的元素中除去</td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                需限定范围，可在选择器前面使用包含选择器
+                <br>
+                {}声明块，声明块中的名值对称为声明
+            </p>
+        </section>
+    </main>
+</body>
+</html>

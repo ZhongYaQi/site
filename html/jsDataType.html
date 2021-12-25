@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/jsDataType.css">
+</head>
+<body>
+    <header>
+        <label for="menuBtn" class="menuBtn-label">
+            <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </label>
+        <input id="menuBtn" type="checkbox">
+        <nav>
+            <div class="navContainer">
+                <a href="../index.html" target="_blank">Home</a>
+                <a href="../html/js.html">ES</a>
+                <a href="../html/js6.html">ES6</a>
+                <a href="../html/jsDataType.html" class="current-a">Data Type</a>
+                <a href="../html/jsObject.html">Object</a>
+                <a href="../html/jsOperator.html">Operator</a>
+                <a href="../html/jsFlowControlStatement.html">Flow Control Statement</a>
+            </div>
+        </nav>
+        <div class="inPageNav">
+            <div class="inPageNavContainer">
+                <a href=""></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>String 字符串</h2>
+            <p>基本数据类型</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>"" ''</mark></th>
+                    <td data-th="&quot;&quot; &apos;&apos;" class="mediaColorG">
+                        字符需要被引用
+                        <br>
+                        发生嵌套时，可使用转义字符转义 <span class="colorG">\" \'</span>
+                        <br>
+                        换行 <span class="colorG">\n</span>
+                        <br>
+                        制表符(Tab键) <span class="colorG">\t</span>
+                        <br>
+                        反斜杠 <span class="colorG">\\</span>
+                        <br>
+                        Unicode的编码 <span class="colorG">\u</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>转Number</th>
+                    <td data-th="转Number">
+                        空字符串=<span class="colorG">0</span>
+                        <br>
+                        不是数字的字符串=<span class="colorG">NaN</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">
+                        空字符串=<span class="colorG">false</span>
+                        <br>
+                        其他字符串=<span class="colorG">true</span>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p class="boldFontWeight">强制数据类型转换</p>
+            <br>
+            <p>
+                ①调用被转换数据类型的toString()方法
+                <br>
+                只适用于Number Boolean
+                <br>
+                <span class="colorPurple">var</span> a=a.<span class="colorB">toString</span>();
+            </p>
+            <br>
+            <p>
+                ②调用String()函数
+                <br>
+                将被转换的数据作为参数传递给函数
+                <br>
+                <span class="colorPurple">var</span> a=<span class="colorY">String</span>(a);
+                <br>
+                对于Number和Boolean底层调的仍是toString
+                <br>
+                对于Null和Undefined,则直接被转换为"Null"和"Undefined"
+            </p>
+            <br>
+            <p>
+                ③<span class="operator">+</span>""
+                <br>
+                隐式的类型转换，由浏览器自动完成
+                <br>
+                实际上是在调用String()函数
+                <br>
+                <span class="colorPurple">var</span> a=a<span class="operator">+</span>"";
+            </p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>Number 数值</h2>
+            <p>基本数据类型</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>数字</mark></th>
+                    <td data-th="数字" class="mediaColorG">整数 浮点数</td>
+                </tr>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">
+                        正负数=<span class="colorG">true</span>
+                        <br>
+                        0=<span class="colorG">false</span>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                浮点数运算的结果不一定精确，因为二进制不能精确表示1/10
+                <br>
+                <span class="colorR">*</span>不能进行对精确度要求高的运算
+            </p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>Number.MAX_VALUE</mark></th>
+                    <td data-th="Number.MAX_VALUE" class="mediaColorG">最大值</td>
+                </tr>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">=<span class="colorG">true</span></td>
+                </tr>
+            </table>
+            <br>
+            <p>1.7976931348623157e+308</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>Number.MIN_VALUE</mark></th>
+                    <td data-th="Number.MIN_VALUE" class="mediaColorG">最小值</td>
+                </tr>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">=<span class="colorG">true</span></td>
+                </tr>
+            </table>
+            <br>
+            <p>最小的正值 5e-324</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>Infinity -Infinity</mark></th>
+                    <td data-th="Infinity -Infinity" class="mediaColorG">正 负无穷</td>
+                </tr>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">=<span class="colorG">true</span></td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                使用Number表示的数值超过最大值，返回Infinity
+                <br>
+                使用Number表示的数值小于最小值，返回-Infinity
+            </p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>NaN</mark></th>
+                    <td data-th="NaN" class="mediaColorG">非数字</td>
+                </tr>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">=<span class="colorG">false</span></td>
+                </tr>
+            </table>
+            <br>
+            <p class="boldFontWeight">强制数据类型转换</p>
+            <br>
+            <p>
+                ①调用Number()函数
+                <br>
+                对于内容包含数值的字符串转换有局限
+                <br>
+                <span class="colorPurple">var</span> a=<span class="colorY">Number</span>(a);
+            </p>
+            <br>
+            <p>
+                ②调用parseInt()函数 <span class="tag">用于解析字符串</span>
+                <br>
+                提取首个有效整数转换，条件满足于字符串的首位元素为数值
+                <br>
+                非字符串会被转换为字符串后再操作
+                <br>
+                <span class="colorPurple">var</span> a=<span class="colorBG">parseInt</span>(a);
+            </p>
+            <br>
+            <p>
+                ③调用parseFloat()函数 <span class="tag">用于解析字符串</span>
+                <br>
+                提取首个有效浮点数转换，条件满足于字符串的首位元素为数值
+                <br>
+                非字符串会被转换为字符串后再操作
+                <br>
+                <span class="colorPurple">var</span> a=<span class="colorBG">parseFloat</span>(a);
+            </p>
+            <br>
+            <p>
+                ④隐式的类型转换
+                <br>
+                原理和Number()函数一样
+                <br>
+                <span class="var">var</span> a=a<span class="operator">-</span>0;
+                <br>
+                <span class="var">var</span> a=a<span class="operator">*</span>1;
+                <br>
+                <span class="var">var</span> a=a<span class="operator">/</span>1;
+            </p>
+            <br>
+            <p>
+                ⑤隐式的类型转换
+                <br>
+                原理和Number()函数一样
+                <br>
+                <span class="var">var</span> a=<span class="operator">+</span>a;
+            </p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>Boolean 布尔值</h2>
+            <p>基本数据类型</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>true</mark></th>
+                    <td data-th="true" class="mediaColorG">真</td>
+                </tr>
+                <tr>
+                    <th>转Number</th>
+                    <td data-th="转Number">=<span class="colorG">1</span></td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>false</mark></th>
+                    <td data-th="false" class="mediaColorG">假</td>
+                </tr>
+                <tr>
+                    <th>转Number</th>
+                    <td data-th="转Number">=<span class="colorG">0</span></td>
+                </tr>
+            </table>
+            <br>
+            <p class="boldFontWeight">强制数据类型转换</p>
+            <br>
+            <p>
+                ①调用Boolean()函数
+                <br>
+                <span class="colorPurple">var</span> a=<span class="colorY">Boolean</span>(a);
+                <br>
+                ②隐式的类型转换
+                <br>
+                原理和Boolean()函数一样
+                <br>
+                <span class="var">var</span> a=<span class="operator">!!</span>a;
+            </p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>Null 空值</h2>
+            <p>基本数据类型</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>null</mark></th>
+                    <td data-th="Null" class="mediaColorG">空的对象</td>
+                </tr>
+                <tr>
+                    <th>转Number</th>
+                    <td data-th="转Number">=<span class="colorG">0</span></td>
+                </tr>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">=<span class="colorG">false</span></td>
+                </tr>
+            </table>
+            <br>
+            <p>typeof检查null，返回object</p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>Undefined 未定义</h2>
+            <p>基本数据类型</p>
+            <br>
+            <table>
+                <tr class="mediaClearBd">
+                    <th class="boldFontWeight"><mark>undefined</mark></th>
+                    <td data-th="Undefined" class="mediaColorG">未定义</td>
+                </tr>
+                <tr>
+                    <th>转Number</th>
+                    <td data-th="转Number">=<span class="colorG">NaN</span></td>
+                </tr>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">=<span class="colorG">false</span></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h2>Object 对象</h2>
+            <p>引用数据类型(复合数据类型)</p>
+            <br>
+            <table>
+                <tr>
+                    <th>转Boolean</th>
+                    <td data-th="转Boolean">=<span class="colorG">true</span></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
