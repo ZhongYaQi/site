@@ -1,0 +1,38 @@
+.inPageNav{
+    display:none;
+    height:6rem;
+}
+main{
+    margin-top:0;
+}
+.pre{
+    margin:1rem 0;
+}
+@media(max-width:1150px){
+    main{
+        margin-top:7rem;
+    }
+}
+@media(max-width:940px){
+    .inPageNav{
+        display:block;
+    }
+    main{
+        margin-top:6rem;
+    }
+}
+@media(max-width:562px){
+    h2,p{
+        word-wrap:break-word;
+    }
+    h2{
+        line-height:normal;
+    }
+    .pre{
+        margin:0;
+        background:#fff;
+    }
+    .preContainer{
+        padding:1rem 0;
+    }
+}

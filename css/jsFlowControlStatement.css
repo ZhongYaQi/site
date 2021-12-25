@@ -1,0 +1,16 @@
+.inPageNav{
+    display:none;
+}
+main{
+    margin-top:0;
+}
+@media(max-width:1150px){
+    main{
+        margin-top:7rem;
+    }
+}
+@media(max-width:940px){
+    .inPageNav{
+        display:block;
+    }
+}

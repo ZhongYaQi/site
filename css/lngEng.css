@@ -1,0 +1,27 @@
+.nav{
+    display:none;
+    height:6rem;
+}
+main{
+    display:flex;
+}
+section{
+    flex:1;
+    border-left:1px solid #f9f9f9;
+}
+input{
+    display:none;
+}
+label{
+    display:block;
+    padding:2.6rem;
+    text-align:center;
+}
+.content{
+    height:0;
+    overflow:hidden;
+}
+#wordBtn1:checked ~ .content,
+#wordBtn2:checked ~ .content{
+    height:auto;
+}

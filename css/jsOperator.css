@@ -1,0 +1,16 @@
+th{
+    color:#4BD9B3;
+}
+@media(max-width:600px){
+    tr{
+        display:table-row;
+    }
+    th,td{
+        display:table-cell;
+    }
+}
+@media(max-width:480px){
+    table{
+        width:auto;
+    }
+}

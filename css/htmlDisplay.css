@@ -1,0 +1,42 @@
+.inPageNav{
+    display:none;
+    height:6rem;
+}
+main{
+    margin-top:0;
+}
+section{
+    max-width:584px;
+}
+.tagList-div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    padding:2rem;
+    margin-top:2rem;
+    background:#f9f9f9;
+}
+.tagList-div p{
+    width:8.5rem;
+    padding:0 2rem;
+    line-height:2;
+}
+@media(max-width:1150px){
+    main{
+        margin-top:7rem;
+    }
+}
+@media(max-width:940px){
+    .inPageNav{
+        display:block;
+    }
+}
+@media(max-width:600px){
+    tr{
+        display:table-row;
+        margin-bottom:0;
+    }
+    th,td{
+        display:table-cell;
+    }
+}

@@ -1,0 +1,51 @@
+.inPageNav{
+    display:none;
+    height:6rem;
+}
+main{
+    margin-top:0;
+}
+table{
+    width:54rem;
+}
+@media(max-width:1150px){
+    main{
+        margin-top:7rem;
+    }
+}
+@media(max-width:940px){
+    main{
+        margin-top:6rem;
+    }
+    .inPageNav{
+        display:block;
+    }
+}
+@media(max-width:660px){
+    table{
+        width:30rem;
+    }
+    .mediaNone{
+        display:none;
+    }
+    tr,td{
+        display:block;
+    }
+    table tr:not(:last-of-type){
+        margin-bottom:1rem;
+    }
+    td::before{
+        content:attr(data-th);
+        display:block;
+        padding-bottom:1rem;
+        font-weight:bold;
+    }
+    @media(max-width:480px){
+        main{
+            width:100%;
+        }
+        table{
+            width:100%;
+        }
+    }
+}
